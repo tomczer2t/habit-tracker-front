@@ -24,7 +24,7 @@ body {
 }
 
 .name {
-    height: 80px;
+    height: 40px;
     text-align: center;
 }
 
@@ -48,7 +48,7 @@ body {
 
 .item {
     position: relative;
-    height: 80px;
+    height: 40px;
     aspect-ratio: 1;
     text-align: center;
     background-color: #ff4646;
@@ -61,11 +61,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80px;
+    height: 40px;
     aspect-ratio: 1;
     text-align: center;
     background-color: #d2d2d2;
     border: 2px solid #989898;
+    font-size: .7rem;
 }
 
 
