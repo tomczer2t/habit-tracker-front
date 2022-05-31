@@ -16,7 +16,7 @@ export const Board = () => {
     (async () => {
       try {
         const { data } = await axios.get('habits') as { data: Required<HabitEntity>[] };
-        setHabits(data.map(habit => ({...habit, createdAt: new Date(habit.createdAt)})));
+        setHabits(data);
       } catch (e) {
         console.log(e);
       }
@@ -91,6 +91,9 @@ export const Board = () => {
             <div className="row"
                  key={ habit.id }>
               { habit.stats.map((stat, i) => {
+                const statsLength = habit.stats.length;
+                const statsToOmit = statsLength - 40;
+                if (i < statsToOmit) return null;
 
                 let textStatus: string;
 
