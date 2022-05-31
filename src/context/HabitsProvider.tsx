@@ -1,8 +1,8 @@
 import { createContext, useState, ReactNode, Dispatch, SetStateAction } from 'react';
 import { HabitEntity } from 'types';
 
-export const HabitsContext = createContext<{ habits: Required<HabitEntity>[] | null, setHabits: Dispatch<SetStateAction<Required<HabitEntity>[] | null>> }>({
-  habits: null,
+export const HabitsContext = createContext<{ habits: Required<HabitEntity>[], setHabits: Dispatch<SetStateAction<Required<HabitEntity>[] | []>> }>({
+  habits: [],
   setHabits: () => {},
 });
 
@@ -12,7 +12,7 @@ interface Props {
 
 export const HabitsProvider = ({ children }: Props) => {
 
-  const [habits, setHabits] = useState<Required<HabitEntity>[] | null>(null);
+  const [habits, setHabits] = useState<Required<HabitEntity>[]>([]);
 
   return (
     <HabitsContext.Provider value={ { habits, setHabits } }>
