@@ -114,6 +114,31 @@ export const Board = () => {
 
         </div>
       </section>
+      <div>
+        <div className="name">streaks</div>
+        { habits.map(habit => {
+          let longestStreak = 0;
+          let currentStreak = 0;
+
+          habit.stats.forEach(stat => {
+            if (stat === 2) {
+              currentStreak++;
+              longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
+            }
+            if (stat === 0) {
+              longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
+              currentStreak = 0;
+            }
+          })
+
+          console.log({ longestStreak, currentStreak })
+
+          return <div className="name">
+            <div>{ currentStreak }</div>
+            <div>{ longestStreak }</div>
+          </div>
+        })}
+      </div>
     </article>
   );
 };
