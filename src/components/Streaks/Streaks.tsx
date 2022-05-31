@@ -6,8 +6,8 @@ export const Streaks = () => {
   const { habits } = useHabits();
 
   return (
-    <div>
-      <div className="name">streaks</div>
+    <div className="Streaks">
+      <div className="Streaks__cell-titles cell"><span>current streak</span> <span>longest streak</span></div>
       { habits.map(habit => {
         let longestStreak = 0;
         let currentStreak = 0;
@@ -21,9 +21,9 @@ export const Streaks = () => {
           }
           longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
         })
-        return <div className="name" key={ habit.id }>
-          <div>{ currentStreak }</div>
-          <div>{ longestStreak }</div>
+        return <div className="Streaks__cell cell" key={ habit.id }>
+          <div className="Streaks__streak">{ currentStreak }</div>
+          <div className="Streaks__streak">{ longestStreak }</div>
         </div>
       })}
     </div>

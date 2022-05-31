@@ -6,12 +6,12 @@ export const HabitNames = () => {
   const { habits } = useHabits();
 
   return (
-    <div className="names">
-      <div className="name">Habits</div>
+    <div className="HabitNames">
+      <div className="HabitNames__title-cell cell">Habits</div>
       { habits.map(habit => (
-        <div key={ habit.id + 'name' }
-             className="name">{ habit.name }</div>
+        <div key={ habit.id }
+             className="HabitNames__cell cell">{ habit.name }</div>
       )) }
     </div>
-  )
-}
+  );
+};

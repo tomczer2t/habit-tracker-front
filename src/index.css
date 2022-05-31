@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #2f3241;
+    color: #fff;
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: #20222a #2f3241;  /* scroll thumb and track */
+}
+
 body, button, textarea {
     font-family: sans-serif;
 }
@@ -15,4 +22,25 @@ a {
 
 ol, ul {
     list-style-type: none;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #20222a;       /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2f3241;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #20222a; /* creates padding around scroll thumb */
+}
+
+.cell {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

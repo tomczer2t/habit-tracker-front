@@ -1,0 +1,74 @@
+.HabitRow {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.item {
+    position: relative;
+    height: 40px;
+    aspect-ratio: 1;
+    text-align: center;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.36);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item::before {
+    position: absolute;
+    inset: 1px 1px 1px 1px;
+    display: flex;
+    align-items: center;
+    background-color: #20222a;
+    font-size: .7rem;
+
+}
+
+.skipped::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    transform-origin: left top;
+    transform: rotate(-45deg);
+    background-color: #20222a;
+}
+
+.undone {
+    position: relative;
+    /*background-color: #20222a !important;*/
+    box-shadow: none;
+    border: none;
+}
+
+.undone::after {
+    position: absolute;
+    content: '';
+    inset: 0 0 0 0;
+    background-color: #20222a;
+}
+
+.undone:hover::after {
+    display: none;
+}
+
+.undone:hover::before{
+    content: attr(data-name);
+    justify-content: flex-start;
+    font-size: .8rem;
+}
+
+.done:hover::before {
+    content: 'skip';
+    justify-content: center;
+}
+
+.skipped:hover::after {
+    display: none;
+}
+
+.skipped:hover::before {
+    content: 'unmark';
+
+}

@@ -1,0 +1,18 @@
+.DatesRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.DatesRow__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    aspect-ratio: 1;
+    text-align: center;
+    background-color: #434759;
+    border: 1px solid #525562;
+    font-size: .7rem;
+    text-transform: uppercase;
+}

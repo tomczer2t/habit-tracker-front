@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/HabitsProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HabitsProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Streaks/Streaks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Streaks/Streaks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

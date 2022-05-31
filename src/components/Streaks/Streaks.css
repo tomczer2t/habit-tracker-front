@@ -1,0 +1,30 @@
+.Streaks {
+    border-left: 1px solid #20222a;
+}
+
+.Streaks__cell-titles {
+    display: flex;
+    justify-content: center;
+    gap: .1rem;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.Streaks__cell {
+    justify-content: space-around;
+}
+
+.Streaks__streak {
+    font-size: .85rem;
+    border-radius: 50rem;
+    border: 2px solid #ff0031;
+    aspect-ratio: 1;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Streaks__streak:last-child {
+    border-color: #04d304;
+}
