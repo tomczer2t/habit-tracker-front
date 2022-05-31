@@ -6,6 +6,7 @@ import { useHabits } from '../../hooks/useHabits';
 import { HabitNames } from '../HabitNames/HabitNames';
 import { Streaks } from '../Streaks/Streaks';
 import { HabitStats } from '../HabitStats/HabitStats';
+import { Menu } from '../Menu/Menu';
 
 
 export const Board = () => {
@@ -25,9 +26,12 @@ export const Board = () => {
 
   return (
     <article className="Board">
-      <HabitNames />
-      <HabitStats />
-      <Streaks />
+      <Menu />
+      <div className="Board__habits">
+        <HabitNames />
+        <HabitStats />
+        <Streaks />
+      </div>
     </article>
   );
 };

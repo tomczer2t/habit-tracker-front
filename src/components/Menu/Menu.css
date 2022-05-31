@@ -1,0 +1,19 @@
+.Menu {
+    height: 3rem;
+    background-color: #20222a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+.Menu__settings-icon {
+    font-size: 2rem;
+    transform: rotate(0);
+    transition: 550ms transform;
+    cursor: pointer;
+}
+
+.Menu__settings-icon:hover {
+    transform: rotate(90deg) scale(1.1);
+}

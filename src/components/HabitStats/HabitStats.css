@@ -1,7 +1,7 @@
 .wrapper {
     flex-shrink: 1;
     width: 100%;
-    min-height: 96vh;
+    min-height: calc(96vh - 3rem);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: none;

@@ -14,11 +14,14 @@ body {
     position: relative;
     border: 2px solid #20222a;
     border-radius: .5rem;
-    width: 96vw;
-    min-height: 96vh;
-    display: flex;
     overflow-x: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
+    min-height: 96vh;
+}
+
+.Board__habits {
+    display: flex;
+    width: 96vw;
 }
 
 .Board::after {
