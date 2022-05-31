@@ -1,1 +1,0 @@
-export const getDistanceInDays = (date1: Date, date2: Date) => Number(Math.abs((date1.getTime() - date2.getTime()) / (1000 * 60 * 60 * 24)).toFixed());

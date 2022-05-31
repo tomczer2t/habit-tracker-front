@@ -1,13 +1,14 @@
 import './Board.css';
 import { format } from 'date-fns';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { HabitEntity } from 'types';
 import { axios } from '../../api/axios';
+import { useHabits } from '../../hooks/useHabits';
 
 
 export const Board = () => {
 
-  const [habits, setHabits] = useState<Required<HabitEntity>[] | null>(null);
+  const { habits, setHabits } = useHabits();
 
   const datesPatternArray: Date[] = Array.from({ length: 40 }, (_, i) => new Date(Date.now() - (24 * 60 * 60 * 1000) * (40 - i - 1)));
   const wrapperRef = useRef<HTMLDivElement>(null!);
@@ -41,14 +42,14 @@ export const Board = () => {
   const handleClick = async (habitId: string, index: number) => {
     if (!habits) return;
     const stats = habits.filter(habit => habit.id === habitId)[0].stats
-                        .map((stat, i) => {
-                          if (i !== index) return stat;
-                          if (stat === 0) return 2;
-                          if (stat === 1) return 0;
-                          return 1;
-                        });
+      .map((stat, i) => {
+        if (i !== index) return stat;
+        if (stat === 0) return 2;
+        if (stat === 1) return 0;
+        return 1;
+      });
 
-    const { data } = await axios.patch(`habits/${ habitId }`, { stats })
+    const { data } = await axios.patch(`habits/${ habitId }`, { stats });
     console.log(data);
     setHabits(prev => {
       if (!prev) return null;
@@ -57,9 +58,9 @@ export const Board = () => {
       return copy.map(habit => {
         console.log({ habit });
         if (habit.id !== habitId) return habit;
-        return {...habit, stats: data.stats}
-      })
-    })
+        return { ...habit, stats: data.stats };
+      });
+    });
   };
 
   if (!habits) return null;
@@ -69,8 +70,9 @@ export const Board = () => {
       <div className="names">
         <div className="name">Habits</div>
         { habits.map(habit => (
-          <div key={ habit.id + 'name'} className="name">{ habit.name }</div>
-        ))}
+          <div key={ habit.id + 'name' }
+               className="name">{ habit.name }</div>
+        )) }
       </div>
       <section ref={ wrapperRef }
                className="wrapper">
