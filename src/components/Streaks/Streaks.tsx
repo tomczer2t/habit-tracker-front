@@ -12,11 +12,11 @@ export const Streaks = () => {
         let longestStreak = 0;
         let currentStreak = 0;
 
-        habit.stats.forEach(stat => {
+        habit.stats.forEach((stat, index) => {
           if (stat === 2) {
             currentStreak++;
           }
-          if (stat === 0) {
+          if (stat === 0 && index !== habit.stats.length - 1) {
             currentStreak = 0;
           }
           longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
