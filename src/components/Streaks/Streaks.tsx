@@ -22,7 +22,7 @@ export const Streaks = () => {
           longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
         })
         return <div className="Streaks__cell cell" key={ habit.id }>
-          <div className="Streaks__streak">{ currentStreak }</div>
+          <div className="Streaks__streak" style={{ borderColor: habit.color, color: habit.color }}>{ currentStreak }</div>
           <div className="Streaks__streak">{ longestStreak }</div>
         </div>
       })}

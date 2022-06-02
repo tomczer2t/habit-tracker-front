@@ -2,6 +2,7 @@ import { HabitEntity } from 'types';
 import { axios } from '../../../../api/axios';
 import { useHabits } from '../../../../hooks/useHabits';
 import './HabitRow.css';
+import { useAxiosPrivate } from '../../../../hooks/useAxiosPrivate';
 
 interface Props {
   habit: Required<HabitEntity>;
@@ -10,6 +11,7 @@ interface Props {
 export const HabitRow = ({ habit }: Props) => {
 
   const { habits, setHabits } = useHabits();
+  const axiosPrivate = useAxiosPrivate();
 
   const handleClick = async (habitId: string, index: number) => {
     if (!habits) return;
@@ -21,13 +23,10 @@ export const HabitRow = ({ habit }: Props) => {
         return 1;
       });
 
-    const { data } = await axios.patch(`habits/${ habitId }`, { stats });
-    console.log(data);
+    const { data } = await axiosPrivate.patch(`habits/${ habitId }`, { stats });
     setHabits(prev => {
       const copy = [...prev];
-      console.log({ copy });
       return copy.map(habit => {
-        console.log({ habit });
         if (habit.id !== habitId) return habit;
         return { ...habit, stats: data.stats };
       });
@@ -49,9 +48,9 @@ export const HabitRow = ({ habit }: Props) => {
         else textStatus = 'skipped';
 
         return (
-          <div onClick={ () => handleClick(habit.id, i) }
+          <div onClick={ (e) => handleClick(habit.id, i) }
                key={ habit.id + i }
-               data-name={ habit.name }
+               data-name={ habit.name.slice(0, 10) }
                style={{ backgroundColor: habit.color, color: habit.color }}
                className={ `item ${ textStatus }` } />
         );

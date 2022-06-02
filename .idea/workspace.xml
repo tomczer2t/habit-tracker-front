@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Streaks/Streaks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Streaks/Streaks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -44,6 +54,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/GoHomeBtn" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

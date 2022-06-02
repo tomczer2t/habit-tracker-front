@@ -49,26 +49,27 @@
     background-color: #20222a;
 }
 
-.undone:hover::after {
-    display: none;
-}
+@media (hover: hover) and (pointer: fine) {
+    .undone:hover::after {
+        display: none;
+    }
 
-.undone:hover::before{
-    content: attr(data-name);
-    justify-content: flex-start;
-    font-size: .8rem;
-}
+    .undone:hover::before {
+        content: attr(data-name);
+        justify-content: flex-start;
+        font-size: .8rem;
+    }
 
-.done:hover::before {
-    content: 'skip';
-    justify-content: center;
-}
+    .done:hover::before {
+        content: 'skip';
+        justify-content: center;
+    }
 
-.skipped:hover::after {
-    display: none;
-}
+    .skipped:hover::after {
+        display: none;
+    }
 
-.skipped:hover::before {
-    content: 'unmark';
-
+    .skipped:hover::before {
+        content: 'unmark';
+    }
 }

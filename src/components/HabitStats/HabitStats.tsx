@@ -15,9 +15,11 @@ export const HabitStats = () => {
       wrapperRef.current.scrollTo(wrapperRef.current.scrollWidth, 0);
     };
     window.addEventListener('resize', () => {
-      const scrollFromRightEdge = Math.abs((wrapperRef.current.scrollWidth - wrapperRef.current.offsetWidth) - wrapperRef.current.scrollLeft);
-      if (scrollFromRightEdge < 120) {
-        scrollToEnd();
+      if (wrapperRef.current) {
+        const scrollFromRightEdge = Math.abs((wrapperRef.current.scrollWidth - wrapperRef.current.offsetWidth) - wrapperRef.current.scrollLeft);
+        if (scrollFromRightEdge < 120) {
+          scrollToEnd();
+        }
       }
     });
     scrollToEnd();
@@ -25,7 +27,7 @@ export const HabitStats = () => {
 
   return (
     <section ref={ wrapperRef }
-             className="wrapper">
+             className="HabitStats">
       <div className="rows"
            style={ { width: `${ 40 * 40 }px` } }
       >
@@ -33,5 +35,5 @@ export const HabitStats = () => {
         <HabitRows />
       </div>
     </section>
-  )
-}
+  );
+};

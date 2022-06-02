@@ -1,7 +1,7 @@
-.wrapper {
+.HabitStats {
     flex-shrink: 1;
     width: 100%;
-    min-height: calc(96vh - 3rem);
+    min-height: calc(96vh - 3.25rem);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: none;
@@ -9,16 +9,16 @@
     scrollbar-color: #20222a #2f3241;  /* scroll thumb and track */
 }
 
-.wrapper::-webkit-scrollbar {
+.HabitStats::-webkit-scrollbar {
     width: 12px; /* width of the entire scrollbar */
     height: 1rem;
 }
 
-.wrapper::-webkit-scrollbar-track {
+.HabitStats::-webkit-scrollbar-track {
     background: #20222a;       /* color of the tracking area */
 }
 
-.wrapper::-webkit-scrollbar-thumb {
+.HabitStats::-webkit-scrollbar-thumb {
     background-color: #2f3241;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #20222a; /* creates padding around scroll thumb */

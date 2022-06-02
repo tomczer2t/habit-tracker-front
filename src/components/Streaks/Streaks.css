@@ -16,8 +16,12 @@
 
 .Streaks__streak {
     font-size: .85rem;
+    font-weight: 700;
     border-radius: 50rem;
-    border: 2px solid #ff0031;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ff0031;
+    color: #ff0031;
     aspect-ratio: 1;
     height: 2rem;
     display: flex;
@@ -26,5 +30,6 @@
 }
 
 .Streaks__streak:last-child {
-    border-color: #04d304;
+    color: #737373;
+    border-color: #737373;
 }
