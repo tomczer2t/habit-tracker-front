@@ -1,10 +1,5 @@
-.AddHabit {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
 
-.AddHabit__form {
+.AddHabitForm {
     margin-top: .5rem;
     display: flex;
     flex-direction: column;
@@ -17,13 +12,13 @@
     align-self: center;
 }
 
-.AddHabit__label-container {
+.AddHabitForm__label-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-.AddHabit__input {
+.AddHabitForm__input {
     padding: .5rem;
     background-color: #434759;
     border: none;
@@ -35,14 +30,14 @@
     border-radius: .3rem;
 }
 
-.AddHabit__input-error {
+.AddHabitForm__input-error {
     margin-top: .5rem;
     margin-left: .5rem;
     color: #725d19;
     font-size: .9rem;
 }
 
-.AddHabit__add-btn {
+.AddHabitForm__add-btn {
     background-color: transparent;
     border: 2px solid #ffc400;
     color: #ffc400;
@@ -54,14 +49,22 @@
     cursor: pointer;
 }
 
-.AddHabit__add-btn[disabled] {
+.AddHabitForm__add-btn[disabled] {
     cursor: not-allowed;
     border-color: #725d19;
     color: #725d19;
 }
 
+.AddHabitForm__error {
+    text-align: center;
+    border: 2px solid #dc113a;
+    padding: 1rem;
+    border-radius: .3rem;
+    color: #dc113a;
+}
+
 @media screen and (min-width: 345px) {
-    .AddHabit__add-btn {
+    .AddHabitForm__add-btn {
         align-self: flex-start;
     }
 }

@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { useHabits } from '../../hooks/useHabits';
 import { Colors } from './Colors/Colors';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
-import './AddHabit.css';
-import { GoHomeBtn } from '../common/GoHomeBtn/GoHomeBtn';
+import './AddHabitForm.css';
 
-export const AddHabit = () => {
 
+export const AddHabitForm = () => {
   const [form, setForm] = useState({ name: '', color: '#d71212' });
+  const [error, setError] = useState('');
   const [nameError, setNameError] = useState('');
   const { auth } = useAuth();
   const { setHabits } = useHabits();
@@ -17,6 +17,7 @@ export const AddHabit = () => {
   const axiosPrivate = useAxiosPrivate();
 
   useEffect(() => {
+    setError('');
     setNameError('');
     const nameLength = form.name.length;
     if (nameLength > 40) {
@@ -39,38 +40,38 @@ export const AddHabit = () => {
         return copy;
       });
       navigate('/');
-    } catch (e) {
-
+    } catch (e: any) {
+        const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
+        setError(message);
     }
   };
 
   return (
-    <div className="AddHabit">
-      <GoHomeBtn />
-      <form onSubmit={ handleSubmit }
-            className="AddHabit__form">
-        <h2>New habit</h2>
+    <form onSubmit={ handleSubmit }
+          className="AddHabitForm">
+      <h2>New habit</h2>
 
-        <label className="AddHabit__label-container">Habit:
-          <input type="text"
-                 className="AddHabit__input"
-                 value={ form.name }
-                 onChange={ e => handleChange('name', e.target.value) }
-                 required
-                 min={ 1 }
-                 max={ 40 } />
-          { nameError && <p className="AddHabit__input-error">{ nameError }</p> }
-        </label>
+      <label className="AddHabitForm__label-container">Habit:
+        <input type="text"
+               className="AddHabitForm__input"
+               value={ form.name }
+               onChange={ e => handleChange('name', e.target.value) }
+               required
+               min={ 1 }
+               max={ 40 } />
+        { nameError && <p className="AddHabitForm__input-error">{ nameError }</p> }
+      </label>
 
 
-        <p>Pick a color:</p>
-        <Colors currentColor={ form.color }
-                handleChange={ handleChange } />
+      <p>Pick a color:</p>
+      <Colors currentColor={ form.color }
+              handleChange={ handleChange } />
 
-        <button className="AddHabit__add-btn"
-                disabled={ !form.name || form.name.length > 40 || form.name.length < 1 }>add
-        </button>
-      </form>
-    </div>
+      { error && <p className="AddHabitForm__error">{ error }</p>}
+
+      <button className="AddHabitForm__add-btn"
+              disabled={ !form.name || form.name.length > 40 || form.name.length < 1 || !!error }>add
+      </button>
+    </form>
   );
 };

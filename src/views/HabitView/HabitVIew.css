@@ -1,0 +1,15 @@
+.HabitView {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.HabitView__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.HabitView__edit-link {
+    color: #ffc400;
+    font-size: 1.5em
+}

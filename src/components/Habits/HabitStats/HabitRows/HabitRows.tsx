@@ -1,4 +1,4 @@
-import { useHabits } from '../../../hooks/useHabits';
+import { useHabits } from '../../../../hooks/useHabits';
 import { HabitRow } from './HabitRow/HabitRow';
 import './HabitRows.css';
 

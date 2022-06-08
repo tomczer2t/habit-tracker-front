@@ -20,9 +20,11 @@ export const AuthProvider = ({ children }: Props) => {
   const [auth, setAuth] = useState<State | null>(null);
 
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user)
-      console.log(JSON.parse(user));
+    const userJSON = localStorage.getItem('user');
+    if (userJSON) {
+      const user = JSON.parse(userJSON);
+      setAuth(user);
+    }
   }, []);
 
   return (

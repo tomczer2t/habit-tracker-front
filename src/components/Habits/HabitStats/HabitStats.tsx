@@ -1,4 +1,4 @@
-import { useHabits } from '../../hooks/useHabits';
+import { useHabits } from '../../../hooks/useHabits';
 import { useEffect, useRef } from 'react';
 import './HabitStats.css';
 import { DatesRow } from './DatesRow/DatesRow';

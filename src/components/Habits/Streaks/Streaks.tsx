@@ -1,4 +1,4 @@
-import { useHabits } from '../../hooks/useHabits';
+import { useHabits } from '../../../hooks/useHabits';
 import './Streaks.css';
 
 export const Streaks = () => {

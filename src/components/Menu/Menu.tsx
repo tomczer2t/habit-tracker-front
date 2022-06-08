@@ -1,7 +1,7 @@
 import { FcSettings } from 'react-icons/fc';
 import './Menu.css';
 import { useAuth } from '../../hooks/useAuth';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export const Menu = () => {
@@ -12,7 +12,7 @@ export const Menu = () => {
     <header className="Menu">
       <h1 className="Menu__title">Habit Tracker</h1>
 
-      { auth && <FcSettings className="Menu__settings-icon"/>}
+      { auth && <Link to="/settings"><FcSettings className="Menu__settings-icon"/></Link>}
       { !auth && (
         <div className="Menu__auth-btns">
           <button className="Menu__auth-single-btn"><NavLink to="/login">login</NavLink></button>

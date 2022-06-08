@@ -7,10 +7,10 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    padding: .5rem;
 }
 
 .Board {
-    margin: .5rem;
     position: relative;
     border: 2px solid #20222a;
     border-radius: .5rem;
@@ -18,6 +18,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
     min-height: 96vh;
     width: 96vw;
+    max-width: 1600px;
+    margin-block: .5rem;
+    margin-inline: auto;
 }
 
 .Board::after {

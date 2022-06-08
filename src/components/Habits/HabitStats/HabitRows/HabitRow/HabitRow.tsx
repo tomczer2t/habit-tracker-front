@@ -1,8 +1,8 @@
 import { HabitEntity } from 'types';
-import { axios } from '../../../../api/axios';
-import { useHabits } from '../../../../hooks/useHabits';
+import { axios } from '../../../../../api/axios';
+import { useHabits } from '../../../../../hooks/useHabits';
 import './HabitRow.css';
-import { useAxiosPrivate } from '../../../../hooks/useAxiosPrivate';
+import { useAxiosPrivate } from '../../../../../hooks/useAxiosPrivate';
 
 interface Props {
   habit: Required<HabitEntity>;

@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
 
@@ -9,13 +9,21 @@ export const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const { setAuth } = useAuth();
+  const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
 
+  const location = useLocation();
+  const from = (location?.state as { from: string })?.from || '/';
 
   useEffect(() => {
     setError('');
   }, [email, password]);
+
+  useEffect(() => {
+    if (auth) {
+      navigate(from);
+    }
+  }, [auth]);
 
   const handleSubmit = async (e: FormEvent) => {
     try {
@@ -24,13 +32,12 @@ export const Login = () => {
         return;
       }
       const { data } = await axiosPrivate.post('sessions', { email, password }) as { data: { id: string, accessToken: string }};
-      // localStorage.setItem('user', JSON.stringify({ id: data.id }));
+      localStorage.setItem('user', JSON.stringify({ id: data.id }));
       setAuth(data);
       navigate('/');
     } catch (e: any) {
-      console.log(e.message);
-      console.log(e.response.message);
-      setError('Sorry. Something went wrong. Please try again later.');
+      const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.'
+      setError(message);
     }
   };
 

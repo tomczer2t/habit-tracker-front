@@ -1,16 +1,17 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 
 export const RequireAuth = () => {
 
   const { auth } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (!auth)
-    navigate('/login')
-  }, [auth])
+      navigate('/login', { state: { from: location.pathname }});
+  }, [auth, navigate]);
 
-  return <Outlet />
-}
+  return <Outlet />;
+};
