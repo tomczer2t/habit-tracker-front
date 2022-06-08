@@ -13,15 +13,14 @@ export const SpecificHabit = () => {
   useEffect(() => {
     (async () => {
       const { data } = await axiosPrivate.get(`habits/${ habitId }`);
-      const index1 = data.stats.indexOf(1);
-      const index2 = data.stats.indexOf(2);
-      data.stats.splice(0, index1 === -1 ? index2 : index1 < index2 ? index1 : index2);
-      if (data.stats.length < 360) {
-        data.stats.push(...Array(360 - data.stats.length).fill(0));
-      } else if (data.stats.length > 360) {
-        data.stats.splice(360 - data.stats.length);
+      const stats: number[] = [];
+      data.stats.forEach((stat: number) => stats.unshift(stat));
+      if (stats.length < 360) {
+        stats.push(...Array(360 - stats.length).fill(0));
+      } else if (stats.length > 360) {
+        stats.splice(360 - stats.length);
       }
-      setHabit(data);
+      setHabit({ ...data, stats });
     })();
   }, [habitId]);
 

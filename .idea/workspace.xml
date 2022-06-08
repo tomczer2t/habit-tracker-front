@@ -3,35 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddHabit/AddHabit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddHabitForm/AddHabitForm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddHabit/AddHabit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddHabitForm/AddHabitForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddHabit/Colors/Colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddHabitForm/Colors/Colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddHabit/Colors/Colors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddHabitForm/Colors/Colors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomRadioBtn/CustomRadioBtn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CustomRadioBtn/CustomRadioBtn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomRadioBtn/CustomRadioBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CustomRadioBtn/CustomRadioBtn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitNames/HabitNames.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitNames/HabitNames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitNames/HabitNames.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/DatesRow/DatesRow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/DatesRow/DatesRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/DatesRow/DatesRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRows.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRows.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitRows/HabitRows.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRows.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HabitStats/HabitStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Habits/Habits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Habits.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RequireAuth/RequireAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RequireAuth/RequireAuth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Streaks/Streaks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Streaks/Streaks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Streaks/Streaks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +60,7 @@
       <workItem from="1653891308989" duration="20140000" />
       <workItem from="1653935064900" duration="3882000" />
       <workItem from="1653976555201" duration="3797000" />
-      <workItem from="1654666317813" duration="2958000" />
+      <workItem from="1654666317813" duration="4007000" />
     </task>
     <servers />
   </component>
