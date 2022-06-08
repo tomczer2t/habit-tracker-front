@@ -1,0 +1,16 @@
+.HabitStreaks {
+    max-width: 800px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border: 1px solid #20222a;
+    padding: .5rem;
+}
+
+@media screen and (min-width: 540px) {
+    .HabitStreaks__single-streak {
+        font-size: 1.5em;
+    }
+}
