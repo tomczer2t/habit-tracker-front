@@ -4,9 +4,14 @@ import { useHabits } from '../../../hooks/useHabits';
 import { useNavigate } from 'react-router-dom';
 import { useAxiosPrivate } from '../../../hooks/useAxiosPrivate';
 import { Colors } from './Colors/Colors';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 import './HabitForm.css';
 
+const spinnerStyle = {
+  position: 'absolute',
+  right: '1rem',
+}
 
 interface Props {
   form: { name: string, color: string };
@@ -17,6 +22,8 @@ interface Props {
 
 export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
 
+  const [submitLoading, setSubmitLoading] = useState(false);
+  const [deleteLoading, setDeleteLoading] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(false);
   const [nameError, setNameError] = useState('');
   const [error, setError] = useState('');
@@ -42,7 +49,7 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
     try {
       e.preventDefault();
       if (!form.name || form.name.length > 40 || form.name.length < 1) return;
-
+      setSubmitLoading(true);
       if (type === 'add') {
         const { data } = await axiosPrivate.post('habits', { ...form, userId: auth?.id });
 
@@ -62,9 +69,10 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
         });
       }
 
-
+      setSubmitLoading(false);
       navigate('/');
     } catch (e: any) {
+      setSubmitLoading(false);
       const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
       setError(message);
     }
@@ -76,10 +84,12 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
         setDeleteConfirm(true);
         return;
       }
+      setDeleteLoading(true);
       await axiosPrivate.delete(`habits/${ habitId }`);
       setHabits(prev => prev.filter(habit => habit.id !== habitId));
       navigate('/');
     } catch (e: any) {
+      setDeleteLoading(false);
       const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
       setError(message);
     }
@@ -110,12 +120,12 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
 
       <button className="HabitForm__btn HabitForm__btn--submit"
               disabled={ !form.name || form.name.length > 40 || form.name.length < 1 || !!error }
-      >{ type }</button>
+      >{ type }{ submitLoading && <LoadingSpinner style={spinnerStyle}/> }</button>
 
       { type === 'edit' && (
         <button type="button"
                 className={ `HabitForm__btn HabitForm__btn--delete ${ deleteConfirm ? 'HabitForm__btn--delete-confirm' : '' }` }
-                onClick={ handleDelete }>delete</button>
+                onClick={ handleDelete }>delete{ deleteLoading && <LoadingSpinner style={{ ...spinnerStyle, color: '#000'}}/> }</button>
       ) }
     </form>
   );

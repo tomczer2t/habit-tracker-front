@@ -38,6 +38,7 @@
 }
 
 .HabitForm__btn {
+    position: relative;
     background-color: transparent;
     border-radius: 50rem;
     padding-block: .5rem;

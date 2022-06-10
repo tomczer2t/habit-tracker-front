@@ -2,7 +2,11 @@ import { ImSpinner2 } from 'react-icons/im';
 
 import './LoadingSpinner.css';
 
-export const LoadingSpinner = () => {
+interface Props {
+  style?: any;
+}
 
-  return <ImSpinner2 className="LoadingSpinner"/>
+export const LoadingSpinner = ({ style }: Props) => {
+
+  return <ImSpinner2 style={style} className="LoadingSpinner"/>
 }
