@@ -22,15 +22,16 @@ export const HabitRow = ({ habit }: Props) => {
         if (stat === 1) return 0;
         return 1;
       });
-
-    const { data } = await axiosPrivate.patch(`habits/${ habitId }`, { stats });
     setHabits(prev => {
-      const copy = [...prev];
-      return copy.map(habit => {
-        if (habit.id !== habitId) return habit;
-        return { ...habit, stats: data.stats };
+      return prev.map(habit => {
+        if (habit.id === habitId) {
+          return { ...habit, stats }
+        } else {
+          return habit
+        }
       });
-    });
+    })
+    await axiosPrivate.patch(`habits/${ habitId }`, { stats });
   };
 
   return (
