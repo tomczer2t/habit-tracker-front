@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { Link } from 'react-router-dom';
 
@@ -13,6 +13,8 @@ interface Props {
 
 export const SinglNameItem = ({ habit, moveCard, findCard, saveNewOrder }: Props) => {
 
+  const [disableHoverStyles, setDisableHoverStyles] = useState(false);
+
   const originalIndex = findCard(habit.id).index;
 
   const [{ isDragging }, drag] = useDrag(
@@ -25,6 +27,7 @@ export const SinglNameItem = ({ habit, moveCard, findCard, saveNewOrder }: Props
       end: (item, monitor) => {
         const { id: droppedId, originalIndex } = item;
         const didDrop = monitor.didDrop();
+        setDisableHoverStyles(false);
         if (!didDrop) {
           moveCard(droppedId, originalIndex);
         }
@@ -49,6 +52,13 @@ export const SinglNameItem = ({ habit, moveCard, findCard, saveNewOrder }: Props
     [findCard, moveCard],
   );
 
+  useEffect(() => {
+    console.log(isDragging)
+    if (isDragging) {
+      setDisableHoverStyles(true);
+    }
+  }, [isDragging])
+
   const opacity = isDragging ? 0 : 1;
 
   return (
@@ -56,7 +66,7 @@ export const SinglNameItem = ({ habit, moveCard, findCard, saveNewOrder }: Props
         ref={ (node) => drag(drop(node)) }
         style={ { opacity } }>
       <Link to={ `/habit/${ habit.id }` }>
-        <div className="SingleName__cell cell"
+        <div className={ `SingleName__cell cell ${ disableHoverStyles ? 'disable-hover-styles' : '' }` }
              style={ { fontSize: habit.name.length < 20 ? '1em' : '.8em' } }>
           { habit.name }
         </div>

@@ -42,6 +42,6 @@ body::-webkit-scrollbar-thumb {
 .cell {
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }

@@ -17,5 +17,9 @@
 
 .SingleName__cell:active {
     box-shadow: none;
+    background-color: #2f3241;
+}
 
+.disable-hover-styles .SingleName__cell:hover {
+    background: inherit !important;
 }

@@ -8,6 +8,7 @@
     gap: .1rem;
     text-align: center;
     font-size: .8rem;
+    padding: .1rem;
 }
 
 .Streaks__cell {
@@ -32,4 +33,10 @@
 .Streaks__streak:last-child {
     color: #737373;
     border-color: #737373;
+}
+
+@media screen and (max-width: 380px) {
+    .Streaks__cell {
+
+    }
 }
