@@ -1,4 +1,5 @@
 .LoadingSpinner {
+    margin-left: .5rem;
     transform: rotate(0);
     animation: loading-spin infinite 1000ms linear;
     color: #ffc400;

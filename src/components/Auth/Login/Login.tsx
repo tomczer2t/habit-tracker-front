@@ -3,6 +3,7 @@ import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useLoading } from '../../../hooks/useLoading';
+import { LoadingSpinner } from '../../common/LoadingSpinner/LoadingSpinner';
 
 export const Login = () => {
 
@@ -12,7 +13,7 @@ export const Login = () => {
   const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [loading, toggleLoading] = useLoading(false);
+  const { loading, toggleLoading } = useLoading(false);
 
   const from = (location?.state as { from: string })?.from || '/';
 
@@ -32,13 +33,16 @@ export const Login = () => {
       if (!email || !password) {
         return;
       }
+      toggleLoading(true);
       const { data } = await axiosPrivate.post('sessions', { email, password }) as { data: { id: string, accessToken: string }};
       localStorage.setItem('user', JSON.stringify({ id: data.id }));
       setAuth(data);
+      toggleLoading(false);
       navigate('/');
     } catch (e: any) {
       const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.'
       setError(message);
+      toggleLoading(false);
     }
   };
 
@@ -61,7 +65,9 @@ export const Login = () => {
 
 
       <button type="submit"
-              disabled={ !email || !password || !!error }>Login
+              disabled={ !email || !password || !!error }>
+        Login
+        { loading && <LoadingSpinner style={{ color: '#2f3241' }}/> }
       </button>
 
       { error && <p className="error">{ error }</p> }

@@ -1,8 +1,10 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
 import { Link } from 'react-router-dom';
+import { useLoading } from '../../../hooks/useLoading';
+import { LoadingSpinner } from '../../common/LoadingSpinner/LoadingSpinner';
 
 export const Register = () => {
 
@@ -11,6 +13,8 @@ export const Register = () => {
   const [passwordRepetition, setPasswordRepetition] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const loginLinkRef = useRef<HTMLAnchorElement>(null!);
+  const { loading, toggleLoading } = useLoading(false);
   const {
     emailError,
     passwordError,
@@ -21,13 +25,19 @@ export const Register = () => {
     setError('');
   }, [email, password, passwordRepetition]);
 
+  useEffect(() => {
+    if (success) {
+      loginLinkRef.current.focus();
+    }
+  }, [success])
+
   const handleSubmit = async (e: FormEvent) => {
     try {
       e.preventDefault();
       if (!email || !password || !passwordRepetition || emailError || passwordError || passwordRepetitionError) {
         return;
       }
-
+      toggleLoading(true);
       await axios.post('users', { email, password });
       setError('');
       setPassword('')
@@ -37,6 +47,8 @@ export const Register = () => {
       const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
       setSuccess(false);
       setError(message);
+    } finally {
+      toggleLoading(false);
     }
   };
 
@@ -84,11 +96,13 @@ export const Register = () => {
       </label>
 
       <button type="submit"
-              disabled={ !email || !password || !passwordRepetition || emailError || passwordError || passwordRepetitionError }>Register
+              disabled={ !email || !password || !passwordRepetition || emailError || passwordError || passwordRepetitionError || !!error }>
+        Register
+        { loading && <LoadingSpinner style={{ color: '#2f3241' }}/> }
       </button>
 
       { error && <p className="error">{ error }</p> }
-      { success && <p className="success">Success! <Link to="/login">Click</Link> to login.</p> }
+      { success && <p className="success">Success! <Link ref={ loginLinkRef } to="/login">Click</Link> to login.</p> }
 
     </form>
   );
