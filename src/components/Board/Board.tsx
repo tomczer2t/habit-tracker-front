@@ -1,13 +1,12 @@
-import React from 'react';
-import { ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
-import { useRefreshHabits } from '../../hooks/useRefreshHabits';
 import { useNavigate } from 'react-router-dom';
 
 import './Board.css';
+import { useUpdateHabits } from '../../hooks/useUpdateHabits';
 
 interface Props {
   children?: ReactNode;
@@ -15,12 +14,17 @@ interface Props {
 
 export const Board = ({ children }: Props) => {
 
-  const { setHabits } = useHabits();
+  const { habits, setHabits } = useHabits();
   const { auth, setAuth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
-  useRefreshHabits();
+  const updateHabits = useUpdateHabits();
 
+  useEffect(() => {
+    const id = updateHabits();
+
+    return () => clearInterval(id);
+  }, [habits, updateHabits]);
 
   useEffect(() => {
     (async () => {

@@ -1,19 +1,17 @@
-import { useEffect } from 'react';
-import { useAuth } from './useAuth';
 import { useHabits } from './useHabits';
+import { useAuth } from './useAuth';
 import { useAxiosPrivate } from './useAxiosPrivate';
 import { HabitEntity } from 'types';
 
-export const useRefreshHabits = () => {
+export const useUpdateHabits = () => {
 
   const { auth } = useAuth();
-  const { habits, setHabits } = useHabits();
+  const { setHabits, habits } = useHabits();
   const axiosPrivate = useAxiosPrivate();
 
-  useEffect(() => {
-    if (!auth) return;
+  return function () {
+    if (!auth || !habits[0]) return;
     const id = setInterval(() => {
-      if (!habits[0]) return;
       const last = new Date(habits[0].lastStatUpdateDate);
       const curr = new Date(new Date().setHours(0, 0, 0, 0));
       if (last.getTime() !== curr.getTime()) {
@@ -26,9 +24,6 @@ export const useRefreshHabits = () => {
         })();
       }
     }, 1000);
-
-    return () => {
-      clearInterval(id);
-    };
-  }, [habits, auth, axiosPrivate, setHabits]);
+    return id;
+  };
 };
