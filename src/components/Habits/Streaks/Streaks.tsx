@@ -9,12 +9,17 @@ export const Streaks = () => {
   const { habits } = useHabits();
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
+    const resize = () => {
       if (window.innerWidth < 380) {
         setShowLongestStreak(false);
       } else {
         setShowLongestStreak(true);
       }
+    }
+
+    resize();
+    window.addEventListener('resize', () => {
+      resize()
     });
   }, []);
 
