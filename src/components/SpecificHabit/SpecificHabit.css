@@ -1,0 +1,9 @@
+.SpecificHabit {
+
+}
+
+.SpecificHabit__loading-spinner {
+    font-size: clamp(2rem, 13vw, 7rem);
+    text-align: center;
+    margin-top: 15vh;
+}

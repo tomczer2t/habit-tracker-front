@@ -1,0 +1,16 @@
+.LoadingSpinner {
+    transform: rotate(0);
+    animation: loading-spin infinite 1000ms linear;
+    color: #ffc400;
+    font-size: 1em;
+}
+
+
+@keyframes loading-spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

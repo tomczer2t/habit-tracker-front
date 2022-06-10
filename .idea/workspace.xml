@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.tsx" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
       <workItem from="1653935064900" duration="3882000" />
       <workItem from="1653976555201" duration="3797000" />
       <workItem from="1654666317813" duration="45847000" />
-      <workItem from="1654774011502" duration="28263000" />
+      <workItem from="1654774011502" duration="31022000" />
     </task>
     <servers />
   </component>

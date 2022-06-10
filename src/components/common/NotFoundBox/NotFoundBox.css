@@ -1,0 +1,22 @@
+.NotFoundBox {
+    position: relative;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+
+.NotFoundBox__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #434759;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.NotFoundBox__background-text {
+    font-size: clamp(6rem, 22vw + 1rem, 15rem);
+    color: #2a2b34;
+    font-weight: 900;
+}
