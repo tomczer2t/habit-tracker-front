@@ -1,4 +1,5 @@
-import React, { ReactNode, useEffect } from 'react';
+import React from 'react';
+import { ReactNode, useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
 import { useAuth } from '../../hooks/useAuth';
