@@ -2,17 +2,18 @@ import { FormEvent, useEffect, useState } from 'react';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useLoading } from '../../../hooks/useLoading';
 
 export const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
   const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
-
   const location = useLocation();
+  const [loading, toggleLoading] = useLoading(false);
+
   const from = (location?.state as { from: string })?.from || '/';
 
   useEffect(() => {

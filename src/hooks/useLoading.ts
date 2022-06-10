@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export const useLoading = (defaultValue?: boolean) => {
-  const [loading, setLoading] = useState(defaultValue ? defaultValue : false);
+export const useLoading = (defaultValue: boolean) => {
+  const [loading, setLoading] = useState(defaultValue);
 
   const toggleValue = (value?: boolean) => {
     setLoading(currentValue => typeof value === 'boolean' ? value : !currentValue);
