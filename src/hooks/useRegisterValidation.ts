@@ -4,11 +4,12 @@ const EMAIL_REGEX = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{
 
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[?!@#$%]).{8,100}$/;
 
-export const useRegisterValidation = (email: string, password: string, passwordRepetition: string) => {
+export const useUserValidation = ({ email, password, passwordRepetition, emailRepetition }: { email?: string, password?: string, passwordRepetition?: string, emailRepetition?: string }) => {
 
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [passwordRepetitionError, setPasswordRepetitionError] = useState(false);
+  const [emailRepetitionError, setEmailRepetitionError] = useState(false);
 
   useEffect(() => {
     if (email && !EMAIL_REGEX.test(email)) {
@@ -16,19 +17,22 @@ export const useRegisterValidation = (email: string, password: string, passwordR
     } else {
       setEmailError(false);
     }
-
     if (password && !PASSWORD_REGEX.test(password)) {
       setPasswordError(true);
     } else {
       setPasswordError(false);
     }
-
     if (passwordRepetition && password !== passwordRepetition) {
       setPasswordRepetitionError(true);
     } else {
       setPasswordRepetitionError(false);
     }
-  }, [email, password, passwordRepetition]);
+    if (emailRepetition && email !== emailRepetition) {
+      setEmailRepetitionError(true);
+    } else {
+      setEmailRepetitionError(false);
+    }
+  }, [email, password, passwordRepetition, emailRepetition]);
 
-  return { emailError, passwordError, passwordRepetitionError };
+  return { emailError, passwordError, passwordRepetitionError, emailRepetitionError };
 };

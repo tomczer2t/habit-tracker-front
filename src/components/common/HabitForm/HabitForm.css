@@ -1,5 +1,5 @@
 
-.AddHabitForm {
+.HabitForm {
     margin-top: .5rem;
     display: flex;
     flex-direction: column;
@@ -12,13 +12,13 @@
     align-self: center;
 }
 
-.AddHabitForm__label-container {
+.HabitForm__label-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
-.AddHabitForm__input {
+.HabitForm__input {
     padding: .5rem;
     background-color: #434759;
     border: none;
@@ -30,32 +30,46 @@
     border-radius: .3rem;
 }
 
-.AddHabitForm__input-error {
+.HabitForm__input-error {
     margin-top: .5rem;
     margin-left: .5rem;
     color: #725d19;
     font-size: .9rem;
 }
 
-.AddHabitForm__add-btn {
+.HabitForm__btn {
     background-color: transparent;
-    border: 2px solid #ffc400;
-    color: #ffc400;
     border-radius: 50rem;
-    padding: .5rem 4rem;
+    padding-block: .5rem;
     min-width: 100px;
     margin-block: 1rem;
     font-weight: 700;
     cursor: pointer;
 }
 
-.AddHabitForm__add-btn[disabled] {
+.HabitForm__btn--submit {
+    border: 2px solid #ffc400;
+    color: #ffc400;
+}
+
+.HabitForm__btn--delete {
+    border: 1px solid #dc133b;
+    color: #ff0031;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.HabitForm__btn--delete-confirm {
+    background-color: #ff0031;
+    color: #20222a;
+}
+
+.HabitForm__btn--submit[disabled] {
     cursor: not-allowed;
     border-color: #725d19;
     color: #725d19;
 }
 
-.AddHabitForm__error {
+.HabitForm__error {
     text-align: center;
     border: 2px solid #dc113a;
     padding: 1rem;
@@ -64,7 +78,7 @@
 }
 
 @media screen and (min-width: 345px) {
-    .AddHabitForm__add-btn {
+    .HabitForm__btn {
         align-self: flex-start;
     }
 }

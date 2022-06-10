@@ -1,4 +1,4 @@
-import { CustomRadioBtn } from '../../common/CustomRadioBtn/CustomRadioBtn';
+import { CustomRadioBtn } from '../../CustomRadioBtn/CustomRadioBtn';
 import './Colors.css';
 
 interface Props {

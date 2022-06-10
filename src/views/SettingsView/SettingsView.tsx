@@ -1,12 +1,16 @@
 import './SettingsView.css';
-import { GoHomeBtn } from '../../components/common/GoHomeBtn/GoHomeBtn';
+import { GoBackBtn } from '../../components/common/GoBackBtn/GoBackBtn';
+import { SettingsOptions } from '../../components/SettingsOptions/SettingsOptions';
+import { Outlet } from 'react-router-dom';
 
 export const SettingsView = () => {
 
   return (
     <article className="SettingsView">
-      <GoHomeBtn />
-      <h1>Siema</h1>
+      <GoBackBtn />
+      <h1 className="SettingsView__title">Settings</h1>
+      <SettingsOptions />
+      <Outlet />
     </article>
   );
 };

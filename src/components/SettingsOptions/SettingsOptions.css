@@ -1,0 +1,21 @@
+.SettingsOptions {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1rem;
+}
+
+.SettingsOptions__link {
+    padding: .5rem;
+    color: #ffc400;
+    border-bottom: 1px solid #ffc400;
+    /*transition: ;*/
+}
+
+
+.SettingsOptions__link:hover {
+
+}
+
+.SettingsOptions__link--delete {
+    color: #ff0031;
+}

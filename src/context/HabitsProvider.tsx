@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, Dispatch, SetStateAction } from 'react';
+import { createContext, useState, ReactNode, Dispatch, SetStateAction, useEffect } from 'react';
 import { HabitEntity } from 'types';
 
 export const HabitsContext = createContext<{ habits: Required<HabitEntity>[], setHabits: Dispatch<SetStateAction<Required<HabitEntity>[] | []>> }>({

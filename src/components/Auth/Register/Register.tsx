@@ -1,7 +1,8 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import { useRegisterValidation } from '../../../hooks/useRegisterValidation';
+import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
+import { Link } from 'react-router-dom';
 
 export const Register = () => {
 
@@ -14,7 +15,7 @@ export const Register = () => {
     emailError,
     passwordError,
     passwordRepetitionError,
-  } = useRegisterValidation(email, password, passwordRepetition);
+  } = useUserValidation({ email, password, passwordRepetition });
 
   useEffect(() => {
     setError('');
@@ -87,7 +88,7 @@ export const Register = () => {
       </button>
 
       { error && <p className="error">{ error }</p> }
-      { success && <p className="success">Success! Click here to login.</p> }
+      { success && <p className="success">Success! <Link to="/login">Click</Link> to login.</p> }
 
     </form>
   );

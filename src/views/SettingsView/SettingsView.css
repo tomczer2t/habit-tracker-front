@@ -1,5 +1,8 @@
 .SettingsView {
-    display: flex;
-    flex-direction: column;
     padding: 1rem;
+}
+
+
+.SettingsView__title {
+    margin-block: 1rem;
 }

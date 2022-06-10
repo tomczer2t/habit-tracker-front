@@ -1,28 +1,62 @@
-.Auth {
-    padding: .5rem;
+.ChangeModal-shadow {
+    position: absolute;
+    z-index: 10;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Auth form {
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
+@supports (backdrop-filter: blur(1rem)) {
+    .ChangeModal-shadow {
+        background-color: rgba(0, 0, 0, 0.41);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.ChangeModal {
+    position: relative;
+    color: #fff;
     background-color: #20222a;
-    padding: 2rem;
     border-radius: .3rem;
-    gap: 1rem;
+    margin-inline: .5rem;
     width: 100%;
     max-width: 500px;
     margin-top: max(5vh, 1rem);
     margin-bottom: 2rem;
 }
 
-.Auth label {
+
+.ChangeModal__close-btn {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 1.4rem;
+    background: none;
+    color: #ffc400;
+    border: none;
+    cursor: pointer;
+}
+
+
+.Modal__content form {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    /*background-color: #20222a;*/
+    padding: 2rem;
+    border-radius: .3rem;
+    gap: 1rem;
+}
+
+.Modal__content label {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.Auth label span {
+.Modal__content label span {
     position: absolute;
     top: 1.6rem;
     right: .5rem;
@@ -30,13 +64,13 @@
     font-size: 1.5rem;
 }
 
-.Auth label p {
+.Modal__content label p {
     padding: .5rem;
     font-size: .8rem;
     color: rgba(255, 196, 0, 0.51);
 }
 
-.Auth input {
+.Modal__content input {
     flex-grow: 1;
     padding: .5rem 2rem .5rem .5rem;
     background-color: #434759;
@@ -48,7 +82,7 @@
     margin-top: .1rem;
 }
 
-.Auth button {
+.Modal__content button {
     align-self: center;
     background-color: #ffc400;
     padding: .5rem 2rem;
@@ -61,23 +95,19 @@
     cursor: pointer;
 }
 
-.Auth button[disabled] {
+.Modal__content button[disabled] {
     background-color: #725d19;
     cursor: not-allowed;
 }
 
-.Auth .error {
+.Modal__content .error {
     text-align: center;
     color: #ee002e;
 }
 
-.Auth .success {
+.Modal__content .success {
     text-align: center;
     font-size: 1.1rem;
     color: #00d300;
     font-weight: 700;
-}
-
-.Auth .success a {
-    text-decoration: underline;
 }

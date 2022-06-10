@@ -10,7 +10,7 @@ export const Menu = () => {
 
   return (
     <header className="Menu">
-      <h1 className="Menu__title">Habit Tracker</h1>
+      <Link to="/"><h1 className="Menu__title">Habit Tracker</h1></Link>
 
       { auth && <Link to="/settings"><FcSettings className="Menu__settings-icon"/></Link>}
       { !auth && (
