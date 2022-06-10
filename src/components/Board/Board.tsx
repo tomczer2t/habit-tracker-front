@@ -1,4 +1,3 @@
-import './Board.css';
 import { ReactNode, useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
@@ -6,13 +5,15 @@ import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { useRefreshHabits } from '../../hooks/useRefreshHabits';
 
+import './Board.css';
+
 interface Props {
   children?: ReactNode;
 }
 
 export const Board = ({ children }: Props) => {
 
-  const { habits, setHabits } = useHabits();
+  const { setHabits } = useHabits();
   const { auth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
   useRefreshHabits();

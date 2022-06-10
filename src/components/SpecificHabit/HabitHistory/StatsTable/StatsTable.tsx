@@ -16,10 +16,10 @@ export const StatsTable = ({ stats, color }: Props) => {
         else textStatus = 'skipped';
 
         return <div key={ index }
-                    className={`StatsTable__cell StatsTable__cell--${ textStatus }`}
-                    style={{ backgroundColor: color, color: color }}
-        />
-      })}
+                    className={ `StatsTable__cell StatsTable__cell--${ textStatus }` }
+                    style={ { backgroundColor: color, color: color } }
+        />;
+      }) }
     </div>
   );
 };

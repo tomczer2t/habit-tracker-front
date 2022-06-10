@@ -11,7 +11,7 @@ export const EditHabitForm = () => {
   const { habitId } = useParams();
 
   useEffect(() => {
-    const habit = habits.filter(habit => habit.id === habitId)[0] ;
+    const habit = habits.filter(habit => habit.id === habitId)[0];
     if (!habit) {
 
       return;

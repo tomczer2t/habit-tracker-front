@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 import { Auth } from './components/Auth/Auth';
@@ -11,10 +10,10 @@ import { SettingsView } from './views/SettingsView/SettingsView';
 import { SpecificHabit } from './components/SpecificHabit/SpecificHabit';
 import { EditHabitForm } from './components/EditHabitForm/EditHabitForm';
 import { NoMatchView } from './views/NoMatchView/NoMatchView';
-import { ChangeModal } from './components/common/ChangeModal/ChangeModal';
 import { EmailEditor } from './components/EmailEditor/EmailEditor';
 import { PasswordEditor } from './components/PasswordEditor/PasswordEditor';
-import { Container } from './components/Test/Container';
+
+import './App.css';
 
 export const App = () => {
   return (
@@ -23,7 +22,6 @@ export const App = () => {
         <Route path="/" element={ <MainLayout /> }>
           <Route path="login" element={ <Auth /> } />
           <Route path="register" element={ <Auth /> } />
-          <Route path="1" element={ <Container /> } />
           <Route path="*" element={ <NoMatchView /> } />
            {/*_____REQUIRE AUTH_____  */}
           <Route path="/" element={ <RequireAuth /> }>

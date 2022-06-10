@@ -1,8 +1,9 @@
 import { HabitNames } from './HabitNames/HabitNames';
 import { HabitStats } from './HabitStats/HabitStats';
 import { Streaks } from './Streaks/Streaks';
-import './Habits.css';
 import { Link } from 'react-router-dom';
+
+import './Habits.css';
 
 export const Habits = () => {
 

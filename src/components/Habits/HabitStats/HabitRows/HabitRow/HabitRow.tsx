@@ -48,10 +48,10 @@ export const HabitRow = ({ habit }: Props) => {
         else textStatus = 'skipped';
 
         return (
-          <div onClick={ (e) => handleClick(habit.id, i) }
+          <div onClick={ () => handleClick(habit.id, i) }
                key={ habit.id + i }
                data-name={ habit.name.slice(0, 10) }
-               style={{ backgroundColor: habit.color, color: habit.color }}
+               style={ { backgroundColor: habit.color, color: habit.color } }
                className={ `item ${ textStatus }` } />
         );
       }) }

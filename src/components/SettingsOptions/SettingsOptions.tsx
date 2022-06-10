@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { MouseEvent, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
+
 import './SettingsOptions.css';
 
 export const SettingsOptions = () => {
 
   const [confirm, setConfirm] = useState(false);
-  const [deleteError, setDeleteError] = useState(false);
+  const [deleteError ,setDeleteError] = useState(false);
   const { setAuth, auth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
 

@@ -1,5 +1,6 @@
 import { BsArrowLeftCircle } from 'react-icons/bs';
 import { Link, useLocation } from 'react-router-dom';
+
 import './GoBackBtn.css';
 
 export const GoBackBtn = () => {

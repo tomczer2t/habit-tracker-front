@@ -1,9 +1,10 @@
-import { createContext, useState, ReactNode, Dispatch, SetStateAction, useEffect } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
 import { HabitEntity } from 'types';
 
 export const HabitsContext = createContext<{ habits: Required<HabitEntity>[], setHabits: Dispatch<SetStateAction<Required<HabitEntity>[] | []>> }>({
   habits: [],
-  setHabits: () => {},
+  setHabits: () => {
+  },
 });
 
 interface Props {

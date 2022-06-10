@@ -1,8 +1,9 @@
-import { ReactNode, useEffect, useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import { useHandleBlur } from '../../../hooks/useHandleBlur';
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import './ChangeModal.css';
 import { useNavigate } from 'react-router-dom';
+
+import './ChangeModal.css';
 
 interface Props {
   children: ReactNode;

@@ -1,11 +1,9 @@
 import { HabitEntity } from 'types';
 import { useHabits } from './useHabits';
-import { useAxiosPrivate } from './useAxiosPrivate';
 
 export const useNewOrderHabits = () => {
 
   const { habits, setHabits } = useHabits();
-  const axiosPrivate = useAxiosPrivate();
 
   return async function (names: { id: string }[]) {
 
@@ -17,10 +15,10 @@ export const useNewOrderHabits = () => {
         habitsWithNewOrder.push(foundHabit);
       }
       return habitsWithNewOrder;
-    }
+    };
     const newOrderHabits = giveHabitsWithNewOrder();
     setHabits(newOrderHabits);
-    return newOrderHabits
+    return newOrderHabits;
   };
 };
 

@@ -15,7 +15,7 @@ export const useRefreshHabits = () => {
     const id = setInterval(() => {
       if (!habits[0]) return;
       const last = new Date(habits[0].lastStatUpdateDate);
-      const curr = new Date(new Date().setHours(0,0,0,0,));
+      const curr = new Date(new Date().setHours(0, 0, 0, 0));
       if (last.getTime() !== curr.getTime()) {
         (async () => {
           const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };

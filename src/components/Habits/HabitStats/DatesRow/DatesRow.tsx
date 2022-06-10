@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+
 import './DatesRow.css';
 
 export const DatesRow = () => {
@@ -16,5 +17,5 @@ export const DatesRow = () => {
         </div>;
       }) }
     </div>
-  )
-}
+  );
+};

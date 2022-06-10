@@ -1,6 +1,7 @@
 import { GoBackBtn } from '../../components/common/GoBackBtn/GoBackBtn';
-import './AddHabitView.css';
 import { AddHabitForm } from '../../components/AddHabitForm/AddHabitForm';
+
+import './AddHabitView.css';
 
 export const AddHabitView = () => {
 

@@ -17,18 +17,18 @@ export const useAxiosPrivate = () => {
         }
         return config;
       },
-      (err) =>Promise.reject(err)
-      );
+      (err) => Promise.reject(err),
+    );
     const axiosResIntercept = axiosPrivate.interceptors.response.use(
       (res) => res,
       async (err) => {
         const prevReq = err?.config;
         if (err.response.status === 403 && !prevReq.sent) {
-            prevReq.sent = true;
-            const accessToken = await refresh();
-            prevReq.headers['authorization'] = `Bearer ${ accessToken }`;
-            return axiosPrivate(prevReq);
-          }
+          prevReq.sent = true;
+          const accessToken = await refresh();
+          prevReq.headers['authorization'] = `Bearer ${ accessToken }`;
+          return axiosPrivate(prevReq);
+        }
         return Promise.reject(err);
       },
     );

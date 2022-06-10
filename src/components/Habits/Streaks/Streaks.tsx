@@ -1,4 +1,5 @@
 import { useHabits } from '../../../hooks/useHabits';
+
 import './Streaks.css';
 
 export const Streaks = () => {
@@ -20,12 +21,14 @@ export const Streaks = () => {
             currentStreak = 0;
           }
           longestStreak = longestStreak < currentStreak ? currentStreak : longestStreak;
-        })
-        return <div className="Streaks__cell cell" key={ habit.id }>
-          <div className="Streaks__streak" style={{ borderColor: habit.color, color: habit.color }}>{ currentStreak }</div>
+        });
+        return <div className="Streaks__cell cell"
+                    key={ habit.id }>
+          <div className="Streaks__streak"
+               style={ { borderColor: habit.color, color: habit.color } }>{ currentStreak }</div>
           <div className="Streaks__streak">{ longestStreak }</div>
-        </div>
-      })}
+        </div>;
+      }) }
     </div>
-  )
-}
+  );
+};

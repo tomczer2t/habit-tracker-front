@@ -1,5 +1,6 @@
-import './CustomRadioBtn.css';
 import { ChangeEvent, MouseEvent, useState } from 'react';
+
+import './CustomRadioBtn.css';
 
 interface Props {
   color: string;

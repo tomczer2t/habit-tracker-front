@@ -23,7 +23,7 @@ export const Login = () => {
     if (auth) {
       navigate(from);
     }
-  }, [auth]);
+  }, [auth, from, navigate]);
 
   const handleSubmit = async (e: FormEvent) => {
     try {

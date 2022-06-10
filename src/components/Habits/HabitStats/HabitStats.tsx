@@ -1,8 +1,9 @@
 import { useHabits } from '../../../hooks/useHabits';
 import { useEffect, useRef } from 'react';
-import './HabitStats.css';
 import { DatesRow } from './DatesRow/DatesRow';
 import { HabitRows } from './HabitRows/HabitRows';
+
+import './HabitStats.css';
 
 export const HabitStats = () => {
   const { habits } = useHabits();

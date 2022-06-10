@@ -5,28 +5,6 @@ import { useUserValidation } from '../../hooks/useRegisterValidation';
 import { axios } from '../../api/axios';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 
-// export const PasswordEditor = () => {
-//
-//   const inputRef = useRef<HTMLInputElement>(null!);
-//
-//   useEffect(() => {
-//     inputRef.current.focus();
-//   },[]);
-//
-//   return (
-//     <ChangeModal>
-//       <form>
-//         <h2>Change password</h2>
-//         <label>New password <input ref={ inputRef } type="password" /></label>
-//         <label>Repeat password <input type="password" /></label>
-//         <label>Old password <input type="password" /></label>
-//         <button>submit</button>
-//       </form>
-//     </ChangeModal>
-//   );
-// };
-
-
 
 export const PasswordEditor = () => {
 
@@ -80,14 +58,15 @@ export const PasswordEditor = () => {
         <h2>Change password</h2>
         <label>New password
           <input ref={ inputRef }
-                 value={ newPassword}
+                 value={ newPassword }
                  required
                  onChange={ e => setNewPassword(e.target.value) }
                  type="password" />
           { passwordError && (
             <>
               <span><IoCloseCircleOutline /></span>
-              <p>Password must be at least 8 characters long and has to contain 1 normal letter, 1 capital letter, 1 number, and any of special character - "?", "!", "@", "#", "$", "%".</p>
+              <p>Password must be at least 8 characters long and has to contain 1 normal letter, 1 capital letter, 1
+                 number, and any of special character - "?", "!", "@", "#", "$", "%".</p>
             </>
           ) }
         </label>
