@@ -15,6 +15,7 @@ import { PasswordEditor } from './components/PasswordEditor/PasswordEditor';
 import { InfoView } from './views/InfoView/InfoView';
 
 import './App.css';
+import { ErrorView } from './views/ErrorView/ErrorView';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path="login" element={ <Auth /> } />
           <Route path="register" element={ <Auth /> } />
           <Route path="info" element={ <InfoView /> } />
+          <Route path="error" element={ <ErrorView /> } />
           <Route path="*" element={ <NoMatchView /> } />
            {/*_____REQUIRE AUTH_____  */}
           <Route path="/" element={ <RequireAuth /> }>

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { HabitEntity } from 'types';
@@ -15,22 +15,27 @@ export const SpecificHabit = () => {
   const [loading, setLoding] = useState(false);
   const { habitId } = useParams();
   const axiosPrivate = useAxiosPrivate();
+  const navigate = useNavigate();
   const { habits } = useHabits();
 
   useEffect(() => {
     (async () => {
-      setLoding(true);
-      const { data } = await axiosPrivate.get(`habits/${ habitId }`);
-      setLoding(false);
-      if (!data) {
-        return;
+      try {
+        setLoding(true);
+        const { data } = await axiosPrivate.get(`habits/${ habitId }`);
+        setLoding(false);
+        if (!data) {
+          return;
+        }
+        const stats: number[] = [];
+        data.stats.forEach((stat: number) => stats.unshift(stat));
+        if (stats.length < 360) {
+          stats.push(...Array(360 - stats.length).fill(0));
+        }
+        setHabit({ ...data, stats });
+      } catch (e) {
+        navigate('/error');
       }
-      const stats: number[] = [];
-      data.stats.forEach((stat: number) => stats.unshift(stat));
-      if (stats.length < 360) {
-        stats.push(...Array(360 - stats.length).fill(0));
-      }
-      setHabit({ ...data, stats });
     })();
   }, [habitId, habits, axiosPrivate]);
 

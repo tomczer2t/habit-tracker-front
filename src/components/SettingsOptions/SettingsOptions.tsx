@@ -44,6 +44,8 @@ export const SettingsOptions = () => {
             className="SettingsOptions__link">Change email</Link>
       <Link to="password"
             className="SettingsOptions__link">Change password</Link>
+      <Link to="/info"
+            className="SettingsOptions__link">Page info</Link>
       <Link to="/logout"
             className="SettingsOptions__link"
             onClick={ handleLogout }>Logout</Link>
