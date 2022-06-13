@@ -1,5 +1,5 @@
 import { FcSettings } from 'react-icons/fc';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../../hooks/useAuth';
 import { Link, NavLink } from 'react-router-dom';
 
 import './Menu.css';

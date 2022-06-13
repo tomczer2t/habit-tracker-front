@@ -12,6 +12,7 @@ import { EditHabitForm } from './components/EditHabitForm/EditHabitForm';
 import { NoMatchView } from './views/NoMatchView/NoMatchView';
 import { EmailEditor } from './components/EmailEditor/EmailEditor';
 import { PasswordEditor } from './components/PasswordEditor/PasswordEditor';
+import { InfoView } from './views/InfoView/InfoView';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ export const App = () => {
         <Route path="/" element={ <MainLayout /> }>
           <Route path="login" element={ <Auth /> } />
           <Route path="register" element={ <Auth /> } />
+          <Route path="info" element={ <InfoView /> } />
           <Route path="*" element={ <NoMatchView /> } />
            {/*_____REQUIRE AUTH_____  */}
           <Route path="/" element={ <RequireAuth /> }>

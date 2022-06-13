@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Auth.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +51,11 @@
       <recent name="$PROJECT_DIR$/src/components/HabitForm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/Info" />
+      <recent name="$PROJECT_DIR$/src/assets/img" />
       <recent name="$PROJECT_DIR$/src/components/Habits/HabitNames/SingleNameItem" />
-      <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/src/components/Habits" />
-      <recent name="$PROJECT_DIR$/src/layouts" />
-      <recent name="$PROJECT_DIR$/src/components/common/GoHomeBtn" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,7 +73,7 @@
       <workItem from="1654666317813" duration="45847000" />
       <workItem from="1654774011502" duration="41231000" />
       <workItem from="1654976273581" duration="604000" />
-      <workItem from="1655099213413" duration="4481000" />
+      <workItem from="1655099213413" duration="9059000" />
     </task>
     <servers />
   </component>
