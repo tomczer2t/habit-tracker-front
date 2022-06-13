@@ -4,18 +4,21 @@ import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 
 import './SettingsOptions.css';
+import { useHabits } from '../../hooks/useHabits';
 
 export const SettingsOptions = () => {
 
   const [confirm, setConfirm] = useState(false);
   const [deleteError ,setDeleteError] = useState(false);
   const { setAuth, auth } = useAuth();
+  const { setHabits } = useHabits();
   const axiosPrivate = useAxiosPrivate();
 
   const handleLogout = async (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     localStorage.removeItem('user');
     setAuth(null);
+    setHabits([]);
     await axiosPrivate.delete('sessions');
   };
 
