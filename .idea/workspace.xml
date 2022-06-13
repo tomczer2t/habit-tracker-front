@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,7 @@
       <workItem from="1654666317813" duration="45847000" />
       <workItem from="1654774011502" duration="41231000" />
       <workItem from="1654976273581" duration="604000" />
-      <workItem from="1655099213413" duration="2855000" />
+      <workItem from="1655099213413" duration="4481000" />
     </task>
     <servers />
   </component>

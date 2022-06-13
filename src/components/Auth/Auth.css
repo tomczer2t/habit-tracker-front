@@ -81,3 +81,12 @@
 .Auth .success a {
     text-decoration: underline;
 }
+
+.Auth .redirect-paraph {
+    text-align: center;
+    color: #ffc400;
+}
+
+.Auth .redirect-paraph a {
+    text-decoration: underline;
+}

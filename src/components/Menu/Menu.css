@@ -25,6 +25,8 @@
 .Menu__auth-btns {
     border-radius: 50rem;
     overflow: hidden;
+    flex-wrap: nowrap;
+    display: flex;
 }
 
 .Menu__auth-single-btn {
@@ -59,14 +61,16 @@
 @media screen and (max-width: 380px) {
     .Menu {
         text-align: center;
-        flex-direction: column;
-        gap: .5rem;
         max-width: none;
         height: auto;
     }
 
+    .Menu__title {
+        font-size: 1.1rem;
+    }
+
     .Menu__auth-btns {
-        margin-bottom: .3rem;
+        margin-block: .3rem;
     }
 
     .Menu__auth-single-btn a {

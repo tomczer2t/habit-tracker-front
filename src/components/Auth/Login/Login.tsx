@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLoading } from '../../../hooks/useLoading';
 import { LoadingSpinner } from '../../common/LoadingSpinner/LoadingSpinner';
 
@@ -71,6 +71,7 @@ export const Login = () => {
       </button>
 
       { error && <p className="error">{ error }</p> }
+      <p className="redirect-paraph">Don't have an account?<br />Click <Link to="/register">here</Link> to register new one.</p>
 
     </form>
   );

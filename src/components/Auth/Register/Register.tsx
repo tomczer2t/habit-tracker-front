@@ -103,6 +103,7 @@ export const Register = () => {
 
       { error && <p className="error">{ error }</p> }
       { success && <p className="success">Success! <Link ref={ loginLinkRef } to="/login">Click</Link> to login.</p> }
+      { !success && <p className="redirect-paraph">If you have an account click <Link to="/login">here</Link> to go to the login page.</p> }
 
     </form>
   );
