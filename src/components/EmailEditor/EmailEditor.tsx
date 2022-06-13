@@ -4,6 +4,8 @@ import { useUserValidation } from '../../hooks/useRegisterValidation';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { axios } from '../../api/axios';
 import { useAuth } from '../../hooks/useAuth';
+import { useLoading } from '../../hooks/useLoading';
+import { LoadingSpinner } from '../common/LoadingSpinner/LoadingSpinner';
 
 export const EmailEditor = () => {
 
@@ -12,6 +14,7 @@ export const EmailEditor = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const { loading, toggleLoading } = useLoading(false);
   const { auth } = useAuth();
 
   const {
@@ -37,16 +40,19 @@ export const EmailEditor = () => {
       if (!email || emailError || !emailRep || emailRepetitionError || !password) {
         return;
       }
+      toggleLoading();
       await axios.patch(`users/${ auth?.id }`, { newEmail: email, password });
       setError('');
       setPassword('');
       setEmailRep('');
       setEmail('');
       setSuccess(true);
+      toggleLoading();
     } catch (e: any) {
       const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
       setSuccess(false);
       setError(message);
+      toggleLoading();
     }
   };
 
@@ -86,7 +92,10 @@ export const EmailEditor = () => {
                  value={ password }
                  onChange={ e => setPassword(e.target.value) } />
         </label>
-        <button disabled={ !email || emailError || !emailRep || emailRepetitionError || !password || !!error }>submit</button>
+        <button disabled={ !email || emailError || !emailRep || emailRepetitionError || !password || !!error }>
+          submit
+          { loading && <LoadingSpinner style={{ color: '#2f3241' }} /> }
+        </button>
 
         { error && <p className="error">{ error }</p> }
         { success && <p className="success">Success! Email has been correctly changed.</p> }

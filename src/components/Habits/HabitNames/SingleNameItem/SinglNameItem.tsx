@@ -53,7 +53,6 @@ export const SinglNameItem = ({ habit, moveCard, findCard, saveNewOrder }: Props
   );
 
   useEffect(() => {
-    console.log(isDragging)
     if (isDragging) {
       setDisableHoverStyles(true);
     }
