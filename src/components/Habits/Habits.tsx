@@ -4,18 +4,27 @@ import { Streaks } from './Streaks/Streaks';
 import { Link } from 'react-router-dom';
 
 import './Habits.css';
+import { useAuth } from '../../hooks/useAuth';
+import { InfoView } from '../../views/InfoView/InfoView';
 
 export const Habits = () => {
 
+  const { auth } = useAuth();
+
   return (
-    <div className="Board__habits Habits">
-      <div className="Habits__names-column">
-        <HabitNames />
-        <Link to="/add-habit"
-              className="Habits__add-habit-link">+</Link>
-      </div>
-      <HabitStats />
-      <Streaks />
-    </div>
+   <>
+     { auth && (
+       <div className="Board__habits Habits">
+         <div className="Habits__names-column">
+           <HabitNames />
+           <Link to="/add-habit"
+                 className="Habits__add-habit-link">+</Link>
+         </div>
+         <HabitStats />
+         <Streaks />
+       </div>
+     )}
+     { !auth && <InfoView />}
+   </>
   );
 };

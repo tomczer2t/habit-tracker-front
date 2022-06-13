@@ -8,6 +8,7 @@ import { LoadingSpinner } from '../common/LoadingSpinner/LoadingSpinner';
 
 import './SpecificHabit.css';
 import { NotFoundBox } from '../common/NotFoundBox/NotFoundBox';
+import { useAuth } from '../../hooks/useAuth';
 
 export const SpecificHabit = () => {
 
@@ -17,6 +18,7 @@ export const SpecificHabit = () => {
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const { habits } = useHabits();
+  const { auth } = useAuth();
 
   useEffect(() => {
     (async () => {
@@ -34,6 +36,7 @@ export const SpecificHabit = () => {
         }
         setHabit({ ...data, stats });
       } catch (e) {
+        if (auth)
         navigate('/error');
       }
     })();

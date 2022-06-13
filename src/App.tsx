@@ -22,6 +22,7 @@ export const App = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={ <MainLayout /> }>
+          <Route index element={ <Habits /> } />
           <Route path="login" element={ <Auth /> } />
           <Route path="register" element={ <Auth /> } />
           <Route path="info" element={ <InfoView /> } />
@@ -29,7 +30,6 @@ export const App = () => {
           <Route path="*" element={ <NoMatchView /> } />
            {/*_____REQUIRE AUTH_____  */}
           <Route path="/" element={ <RequireAuth /> }>
-            <Route index element={ <Habits /> } />
             <Route path="settings" element={ <SettingsView /> } >
               <Route path="email" element={ <EmailEditor /> }/>
               <Route path="password" element={ <PasswordEditor /> }/>

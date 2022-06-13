@@ -8,6 +8,7 @@ export const RequireAuth = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   useEffect(() => {
     if (!auth)
       navigate('/login', { state: { from: location.pathname }});
