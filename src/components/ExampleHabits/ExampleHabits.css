@@ -1,0 +1,19 @@
+.ExampleHabits {
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.ExampleHabits__title {
+    margin-bottom: .5rem;
+}
+
+
+.ExampleHabits__image {
+    width: 100%;
+}
+
+.ExampleHabits__drag-info {
+    text-align: center;
+    color: #767b93;
+}

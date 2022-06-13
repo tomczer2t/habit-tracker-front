@@ -1,0 +1,11 @@
+
+.Description__title {
+    margin-bottom: 1rem;
+}
+
+.Description__paraphs {
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

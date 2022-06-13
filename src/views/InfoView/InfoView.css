@@ -1,0 +1,11 @@
+.InfoView {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1000px) {
+    .InfoView {
+        flex-wrap: nowrap;
+    }
+}
