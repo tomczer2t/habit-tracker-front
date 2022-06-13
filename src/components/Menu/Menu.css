@@ -54,3 +54,22 @@
     border-top-left-radius: 50rem;
     border-bottom-left-radius: 50rem;
 }
+
+
+@media screen and (max-width: 380px) {
+    .Menu {
+        text-align: center;
+        flex-direction: column;
+        gap: .5rem;
+        max-width: none;
+        height: auto;
+    }
+
+    .Menu__auth-btns {
+        margin-bottom: .3rem;
+    }
+
+    .Menu__auth-single-btn a {
+        padding: .2rem .6rem;
+    }
+}
