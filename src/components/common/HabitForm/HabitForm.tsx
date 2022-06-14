@@ -73,7 +73,7 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
       navigate('/');
     } catch (e: any) {
       setSubmitLoading(false);
-      const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
+      const message = e.response.data?.message || 'Sorry. Something went wrong. Please try again later.';
       setError(message);
     }
   };

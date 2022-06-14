@@ -15,7 +15,7 @@ interface Props {
 export const Board = ({ children }: Props) => {
 
   const { setHabits } = useHabits();
-  const { auth } = useAuth();
+  const { auth, setAuth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   useRefreshHabits();
@@ -28,6 +28,7 @@ export const Board = ({ children }: Props) => {
         const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };
         setHabits(data);
       } catch (e) {
+        setAuth(null);
         navigate('/error');
       }
     })();

@@ -82,6 +82,10 @@
     margin-top: .1rem;
 }
 
+.Modal__content input:focus {
+    outline: 1px solid #ffc400;
+}
+
 .Modal__content button {
     align-self: center;
     background-color: #ffc400;

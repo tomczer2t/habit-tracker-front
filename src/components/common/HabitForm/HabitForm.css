@@ -30,6 +30,10 @@
     border-radius: .3rem;
 }
 
+.HabitForm__input:focus {
+    outline: 1px solid #ffc400;
+}
+
 .HabitForm__input-error {
     margin-top: .5rem;
     margin-left: .5rem;
