@@ -1,5 +1,5 @@
+import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import { ChangeModal } from '../common/ChangeModal/ChangeModal';
-import { FormEvent, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useUserValidation } from '../../hooks/useRegisterValidation';
 import { axios } from '../../api/axios';

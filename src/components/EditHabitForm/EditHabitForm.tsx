@@ -1,3 +1,4 @@
+import React from 'react';
 import { HabitForm } from '../common/HabitForm/HabitForm';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';

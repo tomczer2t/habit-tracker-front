@@ -1,3 +1,4 @@
+import React from 'react';
 import { GoBackBtn } from '../../components/common/GoBackBtn/GoBackBtn';
 import { AddHabitForm } from '../../components/AddHabitForm/AddHabitForm';
 

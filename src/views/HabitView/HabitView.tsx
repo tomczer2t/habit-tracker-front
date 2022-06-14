@@ -1,3 +1,4 @@
+import React from 'react';
 import { FiEdit2 } from 'react-icons/fi';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { GoBackBtn } from '../../components/common/GoBackBtn/GoBackBtn';

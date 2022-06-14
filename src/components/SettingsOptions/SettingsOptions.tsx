@@ -1,10 +1,10 @@
+import React, { MouseEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MouseEvent, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
+import { useHabits } from '../../hooks/useHabits';
 
 import './SettingsOptions.css';
-import { useHabits } from '../../hooks/useHabits';
 
 export const SettingsOptions = () => {
 

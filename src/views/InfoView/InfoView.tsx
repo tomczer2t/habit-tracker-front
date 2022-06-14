@@ -1,3 +1,4 @@
+import React from 'react';
 import { Description } from '../../components/Description/Description';
 import { ExampleHabits } from '../../components/ExampleHabits/ExampleHabits';
 

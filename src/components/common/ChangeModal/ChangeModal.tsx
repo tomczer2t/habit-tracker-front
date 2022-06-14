@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode, useRef } from 'react';
 import { useHandleBlur } from '../../../hooks/useHandleBlur';
 import { IoCloseCircleOutline } from 'react-icons/io5';
@@ -23,7 +24,7 @@ export const ChangeModal = ({ children }: Props) => {
     <div className="ChangeModal-shadow">
       <section className="ChangeModal"
                onBlur={ handleBlur }
-               tabIndex={ 1 }>
+               tabIndex={ 2 }>
         <button ref={ btnRef }
                 className="ChangeModal__close-btn"
                 onClick={ handleClick }><IoCloseCircleOutline className="ChangeModal__close-icon" /></button>

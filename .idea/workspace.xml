@@ -3,13 +3,55 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddHabitForm/AddHabitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddHabitForm/AddHabitForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Register/Register.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/Description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/Description.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditHabitForm/EditHabitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditHabitForm/EditHabitForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmailEditor/EmailEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmailEditor/EmailEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExampleHabits/ExampleHabits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExampleHabits/ExampleHabits.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/DatesRow/DatesRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/DatesRow/DatesRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRows.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRows.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/ChangeModal/ChangeModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ChangeModal/ChangeModal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/Habits.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Habits.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/Habits.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Habits.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/Streaks/Streaks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/Streaks/Streaks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PasswordEditor/PasswordEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PasswordEditor/PasswordEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RequireAuth/RequireAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RequireAuth/RequireAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitHistory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitStreaks/HabitStreaks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/HabitStreaks/HabitStreaks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/StatsTable/StatsTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/HabitHistory/StatsTable/StatsTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/BtnLoading/BtnLoading.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/BtnLoading/BtnLoading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ChangeModal/ChangeModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ChangeModal/ChangeModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CustomRadioBtn/CustomRadioBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CustomRadioBtn/CustomRadioBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/GoBackBtn/GoBackBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/GoBackBtn/GoBackBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/HabitForm/Colors/Colors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HabitForm/Colors/Colors.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/LoadingSpinner/LoadingSpinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/LoadingSpinner/LoadingSpinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/NotFoundBox/NotFoundBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/NotFoundBox/NotFoundBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HabitsProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HabitsProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useHandleBlur.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHandleBlur.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AddHabitView/AddHabitView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AddHabitView/AddHabitView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ErrorView/ErrorView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ErrorView/ErrorView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HabitView/HabitView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HabitView/HabitView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/InfoView/InfoView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/InfoView/InfoView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NoMatchView/NoMatchView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +60,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,7 +121,7 @@
       <workItem from="1654666317813" duration="45847000" />
       <workItem from="1654774011502" duration="41231000" />
       <workItem from="1654976273581" duration="604000" />
-      <workItem from="1655099213413" duration="21010000" />
+      <workItem from="1655099213413" duration="25867000" />
     </task>
     <servers />
   </component>

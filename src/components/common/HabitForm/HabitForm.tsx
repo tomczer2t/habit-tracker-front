@@ -1,3 +1,4 @@
+import React from 'react';
 import { Dispatch, FormEvent, SetStateAction, useEffect, useState } from 'react';
 import { useAuth } from '../../../hooks/useAuth';
 import { useHabits } from '../../../hooks/useHabits';

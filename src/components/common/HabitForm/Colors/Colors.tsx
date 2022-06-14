@@ -1,3 +1,4 @@
+import React from 'react';
 import { CustomRadioBtn } from '../../CustomRadioBtn/CustomRadioBtn';
 
 import './Colors.css';

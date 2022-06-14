@@ -1,7 +1,8 @@
+import React from 'react';
 import { useHabits } from '../../../hooks/useHabits';
+import { useEffect, useState } from 'react';
 
 import './Streaks.css';
-import { useEffect, useState } from 'react';
 
 export const Streaks = () => {
 

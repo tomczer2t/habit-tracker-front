@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './NotFoundBox.css';
 
 interface Props {

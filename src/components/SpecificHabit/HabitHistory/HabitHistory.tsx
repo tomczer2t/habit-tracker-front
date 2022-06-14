@@ -1,3 +1,4 @@
+import React from 'react';
 import { HabitEntity } from 'types';
 import { StatsTable } from './StatsTable/StatsTable';
 import { HabitStreaks } from './HabitStreaks/HabitStreaks';

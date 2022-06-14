@@ -24,5 +24,5 @@ root.render(
         </HabitsProvider>
       </AuthProvider>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

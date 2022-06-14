@@ -1,3 +1,4 @@
+import React from 'react';
 import { FcSettings } from 'react-icons/fc';
 import { useAuth } from '../../../hooks/useAuth';
 import { Link, NavLink } from 'react-router-dom';

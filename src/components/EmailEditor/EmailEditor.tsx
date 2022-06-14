@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChangeModal } from '../common/ChangeModal/ChangeModal';
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { useUserValidation } from '../../hooks/useRegisterValidation';
@@ -94,7 +95,7 @@ export const EmailEditor = () => {
         </label>
         <button disabled={ !email || emailError || !emailRep || emailRepetitionError || !password || !!error }>
           submit
-          { loading && <LoadingSpinner style={{ color: '#2f3241' }} /> }
+          { loading && <LoadingSpinner style={ { color: '#2f3241' } } /> }
         </button>
 
         { error && <p className="error">{ error }</p> }

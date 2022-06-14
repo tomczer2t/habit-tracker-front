@@ -1,6 +1,8 @@
-import './NoMatchView.css';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { NotFoundBox } from '../../components/common/NotFoundBox/NotFoundBox';
+
+import './NoMatchView.css';
 
 export const NoMatchView = () => {
 

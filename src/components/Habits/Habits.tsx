@@ -1,11 +1,12 @@
+import React from 'react';
 import { HabitNames } from './HabitNames/HabitNames';
 import { HabitStats } from './HabitStats/HabitStats';
 import { Streaks } from './Streaks/Streaks';
 import { Link } from 'react-router-dom';
-
-import './Habits.css';
 import { useAuth } from '../../hooks/useAuth';
 import { InfoView } from '../../views/InfoView/InfoView';
+
+import './Habits.css';
 
 export const Habits = () => {
 

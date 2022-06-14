@@ -1,3 +1,4 @@
+import React from 'react';
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { useUserValidation } from '../../../hooks/useRegisterValidation';

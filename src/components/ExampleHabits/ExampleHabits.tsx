@@ -1,4 +1,6 @@
+import React from 'react';
 import example from '../../assets/img/habits-example.png';
+
 import './ExampleHabits.css';
 
 

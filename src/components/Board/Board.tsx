@@ -1,12 +1,13 @@
+import React from 'react';
 import { ReactNode, useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { useRefreshHabits } from '../../hooks/useRefreshHabits';
+import { useNavigate } from 'react-router-dom';
 
 import './Board.css';
-import { useNavigate } from 'react-router-dom';
 
 interface Props {
   children?: ReactNode;

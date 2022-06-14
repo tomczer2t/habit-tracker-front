@@ -1,3 +1,4 @@
+import React from 'react';
 import { FormEvent, useEffect, useState } from 'react';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
@@ -71,7 +72,9 @@ export const Login = () => {
       </button>
 
       { error && <p className="error">{ error }</p> }
-      <p className="redirect-paraph">Don't have an account?<br />Click <Link to="/register">here</Link> to register new one.</p>
+      <p className="redirect-paraph">
+        Don't have an account?<br />Click <Link to="/register">here</Link> to register new one.
+      </p>
 
     </form>
   );

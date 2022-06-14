@@ -1,5 +1,5 @@
+import React, { useEffect, useRef } from 'react';
 import { useHabits } from '../../../hooks/useHabits';
-import { useEffect, useRef } from 'react';
 import { DatesRow } from './DatesRow/DatesRow';
 import { HabitRows } from './HabitRows/HabitRows';
 

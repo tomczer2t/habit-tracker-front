@@ -1,3 +1,4 @@
+import React from 'react';
 import { useHabits } from '../../../../hooks/useHabits';
 import { HabitRow } from './HabitRow/HabitRow';
 

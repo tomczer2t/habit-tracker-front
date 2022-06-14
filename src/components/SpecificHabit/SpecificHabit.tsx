@@ -1,14 +1,14 @@
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { HabitEntity } from 'types';
 import { HabitHistory } from './HabitHistory/HabitHistory';
 import { useHabits } from '../../hooks/useHabits';
 import { LoadingSpinner } from '../common/LoadingSpinner/LoadingSpinner';
-
-import './SpecificHabit.css';
 import { NotFoundBox } from '../common/NotFoundBox/NotFoundBox';
 import { useAuth } from '../../hooks/useAuth';
+
+import './SpecificHabit.css';
 
 export const SpecificHabit = () => {
 

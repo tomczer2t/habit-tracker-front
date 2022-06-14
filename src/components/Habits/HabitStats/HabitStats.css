@@ -7,6 +7,7 @@
     overscroll-behavior-x: contain;
     scrollbar-width: thin;          /* "auto" or "thin" */
     scrollbar-color: #20222a #2f3241;  /* scroll thumb and track */
+
 }
 
 .HabitStats::-webkit-scrollbar {

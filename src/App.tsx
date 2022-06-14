@@ -13,9 +13,9 @@ import { NoMatchView } from './views/NoMatchView/NoMatchView';
 import { EmailEditor } from './components/EmailEditor/EmailEditor';
 import { PasswordEditor } from './components/PasswordEditor/PasswordEditor';
 import { InfoView } from './views/InfoView/InfoView';
+import { ErrorView } from './views/ErrorView/ErrorView';
 
 import './App.css';
-import { ErrorView } from './views/ErrorView/ErrorView';
 
 export const App = () => {
   return (
