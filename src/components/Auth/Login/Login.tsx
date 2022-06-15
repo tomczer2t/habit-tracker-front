@@ -41,7 +41,7 @@ export const Login = () => {
       toggleLoading(false);
       navigate('/');
     } catch (e: any) {
-      const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.'
+      const message = e.response?.data?.message || 'Sorry. Something went wrong. Please try again later.'
       setError(message);
       toggleLoading(false);
     }
