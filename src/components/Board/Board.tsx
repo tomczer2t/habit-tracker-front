@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactNode, useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { useNavigate } from 'react-router-dom';
-
-import './Board.css';
 import { useUpdateHabits } from '../../hooks/useUpdateHabits';
 import { getHabitsWithUpdatedStats } from '../../utils/getHabitsWithUpdatedStats';
+
+import './Board.css';
 
 interface Props {
   children?: ReactNode;
@@ -17,7 +17,7 @@ interface Props {
 export const Board = ({ children }: Props) => {
 
   const { habits, setHabits } = useHabits();
-  const { auth, setAuth } = useAuth();
+  const { auth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
   const updateHabits = useUpdateHabits();

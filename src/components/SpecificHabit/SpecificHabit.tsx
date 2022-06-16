@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { HabitEntity } from 'types';
