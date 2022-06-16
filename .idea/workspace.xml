@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Board/Board.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/Description.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/Description.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Description/Description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Description/Description.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpecificHabit/SpecificHabit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useRefresh.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRefresh.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUpdateHabits.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUpdateHabits.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/PageFooter/PageFooter.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

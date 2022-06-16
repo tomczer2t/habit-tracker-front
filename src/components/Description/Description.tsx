@@ -24,6 +24,7 @@ export const Description = () => {
            habits. Add new ones and edit old ones. Stay motivated by your current streak and don't let your streak
            end. </p>
         <p><Link to="/register"
+                 className="Description__register-link"
                  onClick={ handleClick }>Create an account to track your habits!</Link></p>
       </div>
     </section>
