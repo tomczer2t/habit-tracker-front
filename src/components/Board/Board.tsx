@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './Board.css';
 import { useUpdateHabits } from '../../hooks/useUpdateHabits';
+import { getHabitsWithUpdatedStats } from '../../utils/getHabitsWithUpdatedStats';
 
 interface Props {
   children?: ReactNode;
@@ -32,9 +33,14 @@ export const Board = ({ children }: Props) => {
       try {
         if (!auth) return;
         const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };
-        setHabits(data);
+        const updatedHabits = getHabitsWithUpdatedStats(data);
+        setHabits(updatedHabits.map(habit => (
+          {
+            ...habit,
+            lastStatUpdateDate: new Date(habit.lastStatUpdateDate),
+            firstStatDate: new Date(habit.firstStatDate),
+          })));
       } catch (e) {
-        setAuth(null);
         navigate('/error');
       }
     })();

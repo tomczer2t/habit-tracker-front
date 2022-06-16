@@ -1,9 +1,11 @@
 import { axios } from '../api/axios';
 import { useAuth } from './useAuth';
+import { useHabits } from './useHabits';
 
 export const useRefresh = () => {
 
   const { setAuth } = useAuth();
+  const { setHabits } = useHabits();
 
   return async function () {
     try {
@@ -14,7 +16,10 @@ export const useRefresh = () => {
       });
       return data;
     } catch (e) {
-      console.log('zrobic logout, error: ', e);
+      await axios.delete('sessions', { withCredentials: true });
+      localStorage.removeItem('user');
+      setAuth(null);
+      setHabits([]);
       return null;
     }
   };

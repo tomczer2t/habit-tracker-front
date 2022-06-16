@@ -9,6 +9,7 @@ import { NotFoundBox } from '../common/NotFoundBox/NotFoundBox';
 import { useAuth } from '../../hooks/useAuth';
 
 import './SpecificHabit.css';
+import { getHabitsWithUpdatedStats } from '../../utils/getHabitsWithUpdatedStats';
 
 export const SpecificHabit = () => {
 
@@ -25,16 +26,17 @@ export const SpecificHabit = () => {
       try {
         setLoding(true);
         const { data } = await axiosPrivate.get(`habits/${ habitId }`);
-        setLoding(false);
         if (!data) {
           return;
         }
+        const updatedHabit = getHabitsWithUpdatedStats([data])[0];
+        setLoding(false);
         const stats: number[] = [];
-        data.stats.forEach((stat: number) => stats.unshift(stat));
+        updatedHabit.stats.forEach((stat: number) => stats.unshift(stat));
         if (stats.length < 360) {
           stats.push(...Array(360 - stats.length).fill(0));
         }
-        setHabit({ ...data, stats });
+        setHabit({ ...updatedHabit, stats });
       } catch (e) {
         if (auth)
         navigate('/error');

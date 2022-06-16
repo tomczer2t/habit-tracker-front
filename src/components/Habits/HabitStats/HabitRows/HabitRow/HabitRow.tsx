@@ -32,9 +32,8 @@ export const HabitRow = ({ habit }: Props) => {
         }
       });
     })
-    await axiosPrivate.patch(`habits/${ habitId }`, { stats });
+    await axiosPrivate.patch(`habits/${ habitId }`, { stats, lastStatUpdateDate: new Date() });
   };
-
   return (
     <div className="HabitRow"
          key={ habit.id }>

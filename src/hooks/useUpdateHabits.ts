@@ -1,7 +1,7 @@
 import { useHabits } from './useHabits';
 import { useAuth } from './useAuth';
 import { useAxiosPrivate } from './useAxiosPrivate';
-import { HabitEntity } from 'types';
+import { getHabitsWithUpdatedStats } from '../utils/getHabitsWithUpdatedStats';
 
 export const useUpdateHabits = () => {
 
@@ -12,19 +12,19 @@ export const useUpdateHabits = () => {
   return function () {
     if (!auth || !habits[0]) return;
     const id = setInterval(() => {
-      const last = new Date(habits[0].lastStatUpdateDate);
-      const curr = new Date(new Date().setHours(0, 0, 0, 0));
-      if (last.getTime() !== curr.getTime()) {
-        (async () => {
-          const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };
-
-          setHabits(data);
-          for (const habit of data) {
-            await axiosPrivate.patch(`habits/${ habit.id }`, { stats: habit.stats, lastStatUpdateDate: new Date().setHours(0, 0, 0, 0) });
-          }
-          setHabits(prevState => prevState.map(habit => ({...habit, lastStatUpdateDate: curr })));
-        })();
-      }
+      const lastTime = habits[0].lastStatUpdateDate.getTime();
+      const currTime = new Date().setHours(0, 0, 0, 0);
+      if (lastTime === currTime) return;
+      (async () => {
+        const freshHabits = getHabitsWithUpdatedStats(habits);
+        setHabits(freshHabits);
+        for (const habit of freshHabits) {
+          await axiosPrivate.patch(`habits/${ habit.id }`, {
+            stats: habit.stats,
+            lastStatUpdateDate: new Date(),
+          });
+        }
+      })();
     }, 1000);
     return id;
   };
