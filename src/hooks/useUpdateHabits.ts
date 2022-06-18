@@ -17,10 +17,12 @@ export const useUpdateHabits = () => {
       if (last.getTime() !== curr.getTime()) {
         (async () => {
           const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };
+
           setHabits(data);
           for (const habit of data) {
-            await axiosPrivate.patch(`habits/${ habit.id }`, { stats: habit.stats });
+            await axiosPrivate.patch(`habits/${ habit.id }`, { stats: habit.stats, lastStatUpdateDate: new Date().setHours(0, 0, 0, 0) });
           }
+          setHabits(prevState => prevState.map(habit => ({...habit, lastStatUpdateDate: curr })));
         })();
       }
     }, 1000);
