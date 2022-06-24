@@ -12,7 +12,7 @@ export const useUpdateHabits = () => {
   return function () {
     if (!auth || !habits[0]) return;
     const id = setInterval(() => {
-      const lastTime = habits[0].lastStatUpdateDate.getTime();
+      const lastTime = new Date(habits[0].lastStatUpdateDate).getTime();
       const currTime = new Date().setHours(0, 0, 0, 0);
       if (lastTime === currTime) return;
       (async () => {
