@@ -18,10 +18,10 @@ export const Description = () => {
 
   return (
     <section className="Description">
-      <h2 className="Description__title">Welcome on Habit Tracker</h2>
+      <h2 className="Description__title">Welcome to Habit Tracker</h2>
       <div className="Description__paraphs">
         <p>This application is designed for people who want to be a better version of themselves every day. Track your
-           habits. Add new ones and edit old ones. Stay motivated by your current streak and don't let your streak
+           habits. Add new ones and improve old ones. Stay motivated by your current streak and don't let your streak
            end. </p>
         <p><Link to="/register"
                  className="Description__register-link"
