@@ -11,6 +11,7 @@
 
 ## Demo
 Here is a working live demo: https://habit-tracker.networkmanager.pl/
+Track your habits. Add new ones and improve old ones.
 
 ## General info
 This project is a client side application, made to track habits.<br>
