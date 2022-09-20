@@ -7,6 +7,7 @@ import { useHabits } from '../../hooks/useHabits';
 import { LoadingSpinner } from '../common/LoadingSpinner/LoadingSpinner';
 import { NotFoundBox } from '../common/NotFoundBox/NotFoundBox';
 import { useAuth } from '../../hooks/useAuth';
+import { getHabitsWithUpdatedStats } from '../../utils/getHabitsWithUpdatedStats';
 
 import './SpecificHabit.css';
 
@@ -25,23 +26,24 @@ export const SpecificHabit = () => {
       try {
         setLoding(true);
         const { data } = await axiosPrivate.get(`habits/${ habitId }`);
-        setLoding(false);
         if (!data) {
-          return;
+          return
         }
+        const updatedHabit = getHabitsWithUpdatedStats([data])[0];
         const stats: number[] = [];
-        data.stats.forEach((stat: number) => stats.unshift(stat));
+        updatedHabit.stats.forEach((stat: number) => stats.unshift(stat));
         if (stats.length < 360) {
           stats.push(...Array(360 - stats.length).fill(0));
         }
-        setHabit({ ...data, stats });
+        setHabit({ ...updatedHabit, stats });
       } catch (e) {
         if (auth)
         navigate('/error');
+      } finally {
+        setLoding(false);
       }
     })();
-  }, [habitId, habits, axiosPrivate]);
-
+  }, [habits, habitId, axiosPrivate]);
 
   return (
     <article className="SpecificHabit">

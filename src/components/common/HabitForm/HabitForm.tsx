@@ -52,16 +52,14 @@ export const HabitForm = ({ form, setForm, type, habitId }: Props) => {
       if (!form.name || form.name.length > 40 || form.name.length < 1) return;
       setSubmitLoading(true);
       if (type === 'add') {
-        const { data } = await axiosPrivate.post('habits', { ...form, userId: auth?.id });
-
+        const { data } = await axiosPrivate.post('habits', { ...form, userId: auth?.id, lastStatUpdateDate: new Date()});
         setHabits(prev => {
           const copy = [...prev];
-          copy.push(data);
+          copy.push({...data,  lastStatUpdateDate: new Date(data.lastStatUpdateDate), firstStatDate: new Date(data.firstStatDate)});
           return copy;
         });
       } else {
         const { data } = await axiosPrivate.patch(`habits/${ habitId }`, { ...form, userId: auth?.id });
-
         setHabits(prev => {
           const copy = prev.filter(habit => habit.id !== habitId);
           copy.push(data);

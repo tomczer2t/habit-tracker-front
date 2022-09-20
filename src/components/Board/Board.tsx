@@ -4,8 +4,9 @@ import { HabitEntity } from 'types';
 import { useHabits } from '../../hooks/useHabits';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
-import { useRefreshHabits } from '../../hooks/useRefreshHabits';
 import { useNavigate } from 'react-router-dom';
+import { useUpdateHabits } from '../../hooks/useUpdateHabits';
+import { getHabitsWithUpdatedStats } from '../../utils/getHabitsWithUpdatedStats';
 
 import './Board.css';
 
@@ -15,21 +16,31 @@ interface Props {
 
 export const Board = ({ children }: Props) => {
 
-  const { setHabits } = useHabits();
-  const { auth, setAuth } = useAuth();
+  const { habits, setHabits } = useHabits();
+  const { auth } = useAuth();
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
-  useRefreshHabits();
+  const updateHabits = useUpdateHabits();
 
+  useEffect(() => {
+    const id = updateHabits();
+
+    return () => clearInterval(id);
+  }, [habits, updateHabits]);
 
   useEffect(() => {
     (async () => {
       try {
         if (!auth) return;
         const { data } = await axiosPrivate.get(`habits?user=${ auth.id }`) as { data: Required<HabitEntity>[] };
-        setHabits(data);
+        const updatedHabits = getHabitsWithUpdatedStats(data);
+        setHabits(updatedHabits.map(habit => (
+          {
+            ...habit,
+            lastStatUpdateDate: new Date(habit.lastStatUpdateDate),
+            firstStatDate: new Date(habit.firstStatDate),
+          })));
       } catch (e) {
-        setAuth(null);
         navigate('/error');
       }
     })();

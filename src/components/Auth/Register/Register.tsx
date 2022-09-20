@@ -45,7 +45,7 @@ export const Register = () => {
       setPasswordRepetition('');
       setSuccess(true);
     } catch (e: any) {
-      const message = e.response.data.message || 'Sorry. Something went wrong. Please try again later.';
+      const message = e.response?.data?.message || 'Sorry. Something went wrong. Please try again later.';
       setSuccess(false);
       setError(message);
     } finally {
