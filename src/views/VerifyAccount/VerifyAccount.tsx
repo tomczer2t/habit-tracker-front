@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useLoading } from '../../hooks/useLoading';
 import { LoadingSpinner } from '../../components/common/LoadingSpinner/LoadingSpinner';
 import { axios } from '../../api/axios';
+import './VerifyAccount.css';
 
 export const VerifyAccount = () => {
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
@@ -21,17 +22,22 @@ export const VerifyAccount = () => {
       toggleLoading(false);
       setIsSuccess(true);
     } catch (err) {
-      console.log(err);
       toggleLoading(false);
       setIsSuccess(false);
     }
   }
 
   return (
-    <article>
+    <article className="verifyAccount">
       { loading && <LoadingSpinner style={ spinnerStyles } /> }
-      { isSuccess === true && <p>Success</p>}
-      { isSuccess === false && <p>Error</p>}
+      { isSuccess === true && <div className="verifyAccount__success">
+        <p className="verifyAccount__success-text">Account verified</p>
+        <a className="verifyAccount__success-link" href="/login">Click to go to login page.</a>
+      </div> }
+      { isSuccess === false && <div className="verifyAccount__error">
+        <p className="verifyAccount__error-text">Wrong token or account is already verified.</p>
+        <a className="verifyAccount__link" href="/login">Click to go to login page.</a>
+      </div>  }
     </article>
   );
 };
