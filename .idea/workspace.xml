@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/HabitForm/HabitForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VerifyAccount/VerifyAccount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VerifyAccount/VerifyAccount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

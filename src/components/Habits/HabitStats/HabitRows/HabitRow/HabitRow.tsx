@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../../../../hooks/useHabits';
 import { useAxiosPrivate } from '../../../../../hooks/useAxiosPrivate';
 
 import './HabitRow.css';
+import { getStreaksInfo } from '../../../../../utils/getCurrentStreak';
+import convert from 'color-convert';
+import { colorShade } from '../../../../../utils/colorShade';
+import { getCurrentColor } from '../../../../../utils/getCurrentColor';
 
 interface Props {
   habit: Required<HabitEntity>;
@@ -26,12 +30,12 @@ export const HabitRow = ({ habit }: Props) => {
     setHabits(prev => {
       return prev.map(habit => {
         if (habit.id === habitId) {
-          return { ...habit, stats }
+          return { ...habit, stats };
         } else {
-          return habit
+          return habit;
         }
       });
-    })
+    });
     await axiosPrivate.patch(`habits/${ habitId }`, { stats, lastStatUpdateDate: new Date() });
   };
   return (
@@ -44,15 +48,19 @@ export const HabitRow = ({ habit }: Props) => {
 
         let textStatus: string;
 
-        if (stat === 0) textStatus = 'undone';
-        else if (stat === 2) textStatus = 'done';
-        else textStatus = 'skipped';
-
+        if (stat === 0) {
+          textStatus = 'undone';
+        } else if (stat === 2) {
+          textStatus = 'done';
+        } else {
+          textStatus = 'skipped';
+        }
+        const color = getCurrentColor(habit.stats, i, habit.color);
         return (
           <div onClick={ () => handleClick(habit.id, i) }
                key={ habit.id + i }
                data-name={ habit.name.slice(0, 10) }
-               style={ { backgroundColor: habit.color, color: habit.color } }
+               style={ { backgroundColor: color, color: habit.color } }
                className={ `item ${ textStatus }` } />
         );
       }) }
