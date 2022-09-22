@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../../../../hooks/useHabits';
 import { useAxiosPrivate } from '../../../../../hooks/useAxiosPrivate';
 
 import './HabitRow.css';
-import { getStreaksInfo } from '../../../../../utils/getCurrentStreak';
-import convert from 'color-convert';
-import { colorShade } from '../../../../../utils/colorShade';
 import { getCurrentColor } from '../../../../../utils/getCurrentColor';
+import { getTextStatus } from '../../../../../utils/getTextStatus';
 
 interface Props {
   habit: Required<HabitEntity>;
@@ -46,15 +44,7 @@ export const HabitRow = ({ habit }: Props) => {
         const statsToOmit = statsLength - 40;
         if (i < statsToOmit) return null;
 
-        let textStatus: string;
-
-        if (stat === 0) {
-          textStatus = 'undone';
-        } else if (stat === 2) {
-          textStatus = 'done';
-        } else {
-          textStatus = 'skipped';
-        }
+        const textStatus = getTextStatus(stat);
         const color = getCurrentColor(habit.stats, i, habit.color);
         return (
           <div onClick={ () => handleClick(habit.id, i) }
