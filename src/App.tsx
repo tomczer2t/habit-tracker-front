@@ -16,6 +16,7 @@ import { InfoView } from './views/InfoView/InfoView';
 import { ErrorView } from './views/ErrorView/ErrorView';
 
 import './App.css';
+import { VerifyAccount } from './views/VerifyAccount/VerifyAccount';
 
 export const App = () => {
   return (
@@ -25,6 +26,7 @@ export const App = () => {
           <Route index element={ <Habits /> } />
           <Route path="login" element={ <Auth /> } />
           <Route path="register" element={ <Auth /> } />
+          <Route path="register/verify/:token" element={ <VerifyAccount /> } />
           <Route path="info" element={ <InfoView /> } />
           <Route path="error" element={ <ErrorView /> } />
           <Route path="*" element={ <NoMatchView /> } />
@@ -45,4 +47,3 @@ export const App = () => {
     </div>
   );
 };
-
