@@ -2,10 +2,11 @@ import React from 'react';
 import { HabitEntity } from 'types';
 import { useHabits } from '../../../../../hooks/useHabits';
 import { useAxiosPrivate } from '../../../../../hooks/useAxiosPrivate';
+import { getTextStatus } from '../../../../../utils/getTextStatus';
+import { getCurrentColor } from '../../../../../utils/getCurrentColor';
+import { sub, isWeekend } from 'date-fns';
 
 import './HabitRow.css';
-import { getCurrentColor } from '../../../../../utils/getCurrentColor';
-import { getTextStatus } from '../../../../../utils/getTextStatus';
 
 interface Props {
   habit: Required<HabitEntity>;
@@ -46,9 +47,13 @@ export const HabitRow = ({ habit }: Props) => {
 
         const textStatus = getTextStatus(stat);
         const color = getCurrentColor(habit.stats, i, habit.color);
+        const isWeekendDay = isWeekend(sub(new Date(), { days: 40 - i - 1 }));
+
         return (
           <div onClick={ () => handleClick(habit.id, i) }
                key={ habit.id + i }
+               data-color={ isWeekendDay ? '#383b44' : '#20222a' }
+               data-is-weekend={ isWeekendDay }
                data-name={ habit.name.slice(0, 10) }
                style={ { backgroundColor: color, color: habit.color } }
                className={ `item ${ textStatus }` } />
