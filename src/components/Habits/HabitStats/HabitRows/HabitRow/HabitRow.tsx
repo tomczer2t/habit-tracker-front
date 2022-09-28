@@ -47,8 +47,7 @@ export const HabitRow = ({ habit }: Props) => {
 
         const textStatus = getTextStatus(stat);
         const color = getCurrentColor(habit.stats, i, habit.color);
-        const isWeekendDay = isWeekend(sub(new Date(), { days: 40 - i - 1 }));
-
+        const isWeekendDay = isWeekend(sub(new Date(), { days: 39 - i + statsToOmit }));
         return (
           <div onClick={ () => handleClick(habit.id, i) }
                key={ habit.id + i }

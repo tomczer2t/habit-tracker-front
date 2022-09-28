@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Habits/HabitStats/HabitRows/HabitRow/HabitRow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +79,7 @@
       <workItem from="1654976273581" duration="604000" />
       <workItem from="1655099213413" duration="33092000" />
       <workItem from="1656047600637" duration="347000" />
+      <workItem from="1664343294044" duration="916000" />
     </task>
     <servers />
   </component>
