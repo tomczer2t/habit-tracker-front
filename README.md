@@ -1,7 +1,7 @@
 # Habit tracker: front-end
 
 
-![Demo screenshot](./src/assets/img/demo-screenshot.png)
+![](https://user-images.githubusercontent.com/88483398/193057875-020ebda6-25eb-4e69-bfbe-e0d284039d83.png)
 
 ## Table of contents
 * [Demo](#demo)
