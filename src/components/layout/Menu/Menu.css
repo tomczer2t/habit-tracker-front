@@ -7,7 +7,20 @@
     padding-inline: 1rem;
 }
 
+.Menu__home-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Menu__logo {
+    height: 2.5rem;
+}
+
 .Menu__title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
     color: #ffc400;
 }
 
@@ -63,6 +76,14 @@
         text-align: center;
         max-width: none;
         height: auto;
+    }
+
+    .Menu__home-link {
+        gap: .3rem;
+    }
+
+    .Menu__logo {
+        height: 2rem;
     }
 
     .Menu__title {
