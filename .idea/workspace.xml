@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SettingsView/SettingsView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

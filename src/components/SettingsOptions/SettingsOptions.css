@@ -1,12 +1,20 @@
 .SettingsOptions {
+    margin-top: .5rem;
     margin-inline: auto;
-    max-width: 600px;
     background-color: #20222a;;
     border-radius: .3rem;
+    max-width: 660px;
+    padding: 2rem;
+}
+
+.SettingsOptions__title {
+    margin-bottom: 1rem;
+}
+
+.SettingsOptions__links-group {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: 2rem;
 }
 
 .SettingsOptions__link {

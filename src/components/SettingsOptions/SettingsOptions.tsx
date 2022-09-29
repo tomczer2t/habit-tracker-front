@@ -41,23 +41,26 @@ export const SettingsOptions = () => {
 
   return (
     <section className="SettingsOptions">
-      <NavLink to="email"
-               className="SettingsOptions__link"><RiMailSettingsLine /> Change email</NavLink>
-      <NavLink to="password"
-               className="SettingsOptions__link"><RiUserSettingsLine /> Change password</NavLink>
-      <Link to="/info"
-            className="SettingsOptions__link"><RiInformationLine /> Page info</Link>
-      <Link to="/delete-account"
-            className={ `SettingsOptions__link ${ confirm ? 'SettingsOptions__link--delete' : '' }` }
-            onClick={ handleDelete }>
-        { !confirm ?
-          <><RiDeleteBin2Line />Delete account</> :
-          <><RiDeleteBin2Line />Are you sure?</>
-        }
-      </Link>
-      <Link to="/logout"
-            className="SettingsOptions__link"
-            onClick={ handleLogout }><RiLogoutBoxLine/> Logout</Link>
+      <h1 className="SettingsOptions__title">Settings</h1>
+      <div className="SettingsOptions__links-group">
+        <NavLink to="email"
+                 className="SettingsOptions__link"><RiMailSettingsLine /> Change email</NavLink>
+        <NavLink to="password"
+                 className="SettingsOptions__link"><RiUserSettingsLine /> Change password</NavLink>
+        <Link to="/info"
+              className="SettingsOptions__link"><RiInformationLine /> Page info</Link>
+        <Link to="/delete-account"
+              className={ `SettingsOptions__link ${ confirm ? 'SettingsOptions__link--delete' : '' }` }
+              onClick={ handleDelete }>
+          { !confirm ?
+            <><RiDeleteBin2Line />Delete account</> :
+            <><RiDeleteBin2Line />Are you sure?</>
+          }
+        </Link>
+        <Link to="/logout"
+              className="SettingsOptions__link"
+              onClick={ handleLogout }><RiLogoutBoxLine/> Logout</Link>
+      </div>
     </section>
   );
 };
