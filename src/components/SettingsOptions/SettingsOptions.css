@@ -1,21 +1,58 @@
 .SettingsOptions {
-    display: flex;
-    flex-direction: column;
-    padding-block: 1rem;
+    margin-inline: auto;
+    max-width: 600px;
+    background-color: #20222a;;
+    border-radius: .3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 2rem;
 }
 
 .SettingsOptions__link {
-    padding: .5rem;
+    position: relative;
+    z-index: 1;
+    padding: 1rem .5rem;
     color: #ffc400;
-    border-bottom: 1px solid #ffc400;
-    /*transition: ;*/
+    background-color: #434759;
+    border-left: 5px solid #ffc400;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    overflow: hidden;
+    transition: color 200ms ease-in-out;
 }
 
+.SettingsOptions__link::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffc400;
+    transition: left 200ms ease-in-out;
+    z-index: -1;
+}
+
+.SettingsOptions__link:hover::before{
+    left: 0;
+}
+
+.SettingsOptions__link.active::before {
+    left: 0;
+}
 
 .SettingsOptions__link:hover {
-
+    color: #20222a;
 }
 
 .SettingsOptions__link--delete {
     color: #ff0031;
+}
+
+@media screen and (max-width: 380px) {
+    .SettingsOptions {
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+    }
 }

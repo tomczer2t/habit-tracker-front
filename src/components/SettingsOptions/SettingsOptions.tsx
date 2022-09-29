@@ -1,5 +1,5 @@
 import React, { MouseEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useAxiosPrivate } from '../../hooks/useAxiosPrivate';
 import { useHabits } from '../../hooks/useHabits';
@@ -40,18 +40,18 @@ export const SettingsOptions = () => {
 
   return (
     <section className="SettingsOptions">
-      <Link to="email"
-            className="SettingsOptions__link">Change email</Link>
-      <Link to="password"
-            className="SettingsOptions__link">Change password</Link>
+      <NavLink to="email"
+            className="SettingsOptions__link">Change email</NavLink>
+      <NavLink to="password"
+            className="SettingsOptions__link">Change password</NavLink>
       <Link to="/info"
             className="SettingsOptions__link">Page info</Link>
-      <Link to="/logout"
-            className="SettingsOptions__link"
-            onClick={ handleLogout }>Logout</Link>
       <Link to="/delete-account"
             className={ `SettingsOptions__link ${ confirm ? 'SettingsOptions__link--delete' : '' }` }
             onClick={ handleDelete }>{ !confirm ? 'Delete account' : 'Are you sure?' }</Link>
+      <Link to="/logout"
+            className="SettingsOptions__link"
+            onClick={ handleLogout }>Logout</Link>
     </section>
   );
 };
