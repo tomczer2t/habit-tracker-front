@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="075c5750-cbe5-45d9-b3cf-75914c4b37d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsOptions/SettingsOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
