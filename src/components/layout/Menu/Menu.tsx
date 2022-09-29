@@ -1,7 +1,8 @@
 import React from 'react';
 import { FcSettings } from 'react-icons/fc';
+import { RiLoginBoxLine } from 'react-icons/ri';
 import { useAuth } from '../../../hooks/useAuth';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/logo.png';
 
 import './Menu.css';
@@ -20,10 +21,7 @@ export const Menu = () => {
 
       { auth && <Link to="/settings" className="Menu__settings-link"><FcSettings className="Menu__settings-icon" /></Link> }
       { !auth && (
-        <div className="Menu__auth-btns">
-          <button className="Menu__auth-single-btn"><NavLink to="/login">login</NavLink></button>
-          <button className="Menu__auth-single-btn"><NavLink to="/register">register</NavLink></button>
-        </div>
+          <button className="Menu__auth-btn"><Link to="/login"><RiLoginBoxLine/></Link></button>
       ) }
 
     </header>
