@@ -11,11 +11,13 @@ body {
     background-color: #2f3241;
     color: #fff;
     overflow-y: scroll;
-    scrollbar-width: thin;          /* "auto" or "thin" */
-    scrollbar-color: #20222a #2f3241;  /* scroll thumb and track */
+    scrollbar-width: thin;
+    scrollbar-color: #20222a #2f3241;
 }
 
-body, button, textarea {
+body,
+button,
+textarea {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,22 +26,23 @@ a {
     text-decoration: none;
 }
 
-ol, ul {
+ol,
+ul {
     list-style-type: none;
 }
 
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-    background: #20222a;       /* color of the tracking area */
+    background: #20222a;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #2f3241;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #20222a; /* creates padding around scroll thumb */
+    background-color: #2f3241;
+    border-radius: 20px;
+    border: 3px solid #20222a;
 }
 
 .cell {
