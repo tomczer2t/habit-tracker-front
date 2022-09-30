@@ -62,7 +62,7 @@
 }
 
 @media screen and (max-width: 380px) {
-    .SettingsOptions {
+    .SettingsOptions__links-group {
         grid-template-columns: repeat(1, 1fr);
         gap: .5rem;
     }
