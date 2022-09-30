@@ -1,5 +1,15 @@
 .GoBackBtn {
+    display: flex;
+    border-radius: 50%;
     color: #ffc400;
     font-size: 1.5em;
     align-self: flex-start;
+    padding: .1rem;
+    transition: color 200ms ease-in-out,
+                background-color 200ms ease-in-out;
+}
+
+.GoBackBtn:hover {
+    color: #434759;
+    background-color: #ffc400;
 }

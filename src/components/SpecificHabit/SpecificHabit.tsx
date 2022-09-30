@@ -27,7 +27,7 @@ export const SpecificHabit = () => {
         setLoding(true);
         const { data } = await axiosPrivate.get(`habits/${ habitId }`);
         if (!data) {
-          return
+          return;
         }
         const updatedHabit = getHabitsWithUpdatedStats([data])[0];
         const stats: number[] = [];
@@ -37,8 +37,9 @@ export const SpecificHabit = () => {
         }
         setHabit({ ...updatedHabit, stats });
       } catch (e) {
-        if (auth)
-        navigate('/error');
+        if (auth) {
+          navigate('/error');
+        }
       } finally {
         setLoding(false);
       }
@@ -49,7 +50,7 @@ export const SpecificHabit = () => {
     <article className="SpecificHabit">
       { loading && <div className="SpecificHabit__loading-spinner"><LoadingSpinner /></div> }
       { habit && <HabitHistory habit={ habit } /> }
-      { !loading && !habit && <NotFoundBox text="Habit not found" />}
+      { !loading && !habit && <NotFoundBox text="Habit not found" /> }
     </article>
   );
 };
