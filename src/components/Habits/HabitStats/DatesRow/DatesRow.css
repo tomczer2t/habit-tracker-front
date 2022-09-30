@@ -15,4 +15,5 @@
     border: 1px solid #525562;
     font-size: .7rem;
     text-transform: uppercase;
+    user-select: none;
 }
