@@ -48,6 +48,7 @@ export const SettingsOptions = () => {
         <NavLink to="password"
                  className="SettingsOptions__link"><RiUserSettingsLine /> Change password</NavLink>
         <Link to="/info"
+              state={{ from: '/settings '}}
               className="SettingsOptions__link"><RiInformationLine /> Page info</Link>
         <Link to="/delete-account"
               className={ `SettingsOptions__link ${ confirm ? 'SettingsOptions__link--delete' : '' }` }
