@@ -5,6 +5,7 @@ import { Streaks } from './Streaks/Streaks';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { InfoView } from '../../views/InfoView/InfoView';
+import { IoAddCircleOutline } from 'react-icons/io5';
 
 import './Habits.css';
 
@@ -19,7 +20,7 @@ export const Habits = () => {
          <div className="Habits__names-column">
            <HabitNames />
            <Link to="/add-habit"
-                 className="Habits__add-habit-link">+</Link>
+                 className="Habits__add-habit-link"><IoAddCircleOutline /></Link>
          </div>
          <HabitStats />
          <Streaks />

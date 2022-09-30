@@ -3,6 +3,8 @@
 }
 
 .Habits__names-column {
+    display: flex;
+    flex-direction: column;
     min-width: 150px;
     flex-basis: 300px;
     flex-shrink: 1;
@@ -11,20 +13,18 @@
 
 .Habits__add-habit-link {
     display: flex;
+    align-self: center;
     justify-content: center;
     align-items: center;
     color: #00ff00;
-    font-size: 1.3em;
-    border: 1px solid #00ff00;
-    border-radius: 50rem;
-    width: 1.3em;
-    height: 1.3em;
-    margin-inline: auto;
+    font-size: 2rem;
+    border-radius: 50%;
     margin-top: .5rem;
     margin-bottom: 1.5rem;
     transition: background-color 200ms ease-in-out,
                 color 200ms ease-in-out;
 }
+
 
 .Habits__add-habit-link:hover {
     background-color: #00ff00;
