@@ -4,14 +4,14 @@
 ![](https://user-images.githubusercontent.com/88483398/193057875-020ebda6-25eb-4e69-bfbe-e0d284039d83.png)
 
 ## Table of contents
-* [Demo](#demo)
+<!--- * [Demo](#demo) -->
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Inspiration](#inspiration)
 
-## Demo
+<!--- ## Demo
 Here is a working live demo: https://habit-tracker.networkmanager.pl/
-Track your habits. Add new ones and improve old ones.
+Track your habits. Add new ones and improve old ones. -->
 
 ## General info
 This project is a client side application, made to track habits.<br>
